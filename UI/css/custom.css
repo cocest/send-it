@@ -1,0 +1,293 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    max-width: 1000px;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4c4e50;
+}
+
+.elem-shadow {
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+}
+
+.top-bottom-padding-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.center-elem {
+    margin: 0 auto;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.nav-dpl-table {
+    display: table;
+}
+
+.hide-elem {
+    visibility: hidden!important;
+}
+
+.remove-elem {
+    display: none!important;
+}
+
+.hr-menu-th-1 {
+    background-color: #5787c2;
+}
+
+.hr-menu-th-2 {
+    background-color: rgba(61, 121, 193, 0.8);
+    box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+#bg-shade-for-active-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+    z-index: 200;
+}
+
+.header-menu {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 500;
+}
+
+.header-menu .menu-links-cont {
+     display: table-cell; 
+     width: 100%;
+     padding-right: 10px;
+}
+
+.header-menu .menu-dropdown-button {
+    display: none;
+    vertical-align: middle;
+}
+
+.header-menu .menu-dropdown-button img {
+    width: 20px;
+    height: auto;
+    padding-right: 20px;
+}
+
+.site-log-cont {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+.site-log-cont img {
+    float: left;
+    width: 150px;
+    height: auto;
+}
+
+ul.hr-bar-menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.hr-bar-menu li {
+    display: inline;
+    text-align: center;
+}
+
+ul.hr-bar-menu-fm-1 a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 25px 23px;
+    font-size: 0.95em;
+    color: white;
+}
+
+ul.hr-bar-menu-fm-1 a:hover {
+    padding: 10px 23px;
+    background-color: #455757;
+    border-radius: 2px;
+}
+
+ul.hr-bar-menu-fm-2 a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 18px 23px;
+    font-size: 0.95em;
+    color: white;
+}
+
+ul.hr-bar-menu-fm-2 a:hover {
+    padding: 10px 23px;
+    background-color: #455757;
+    border-radius: 2px;
+}
+
+ul.vt-bar-menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.vt-bar-menu li {
+    display: block;
+    text-align: center;
+}
+
+ul.vt-bar-menu-fm-1 a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.0em;
+    color: #4c4e50;;
+}
+
+/********description panel component*******/
+.descr-panel-comp {
+    display: inline-table;
+    min-width: 250px;
+    max-width: 350px;
+    width: 33%;
+    height: 400px;
+    margin-right: -2px;
+    font-family: sans-serif;
+}
+
+.descr-panel-comp .content-cont {
+    padding: 15px;
+}
+
+.descr-panel-comp img {
+    width: 100%;
+    height: auto;
+}
+
+.descr-panel-comp .title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.descr-panel-comp .descr {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 20px;
+}
+
+.descr-panel-comp .read-more-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.descr-panel-comp .read-more-link a {
+    font-size: 0.9em;
+    color: forestgreen;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/********description panel component end*******/
+
+.footer-container {
+    background-color: #506c8d;
+    font-family: sans-serif;
+    color: white;
+}
+
+.footer-col-cont {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-col {
+    display: inline-table;
+    width: 220px;
+    text-align: left;
+}
+
+.footer-link-heading {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+ul.footer-link-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.footer-link-ul a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 6px 0px;
+    font-size: 0.85em;
+    color: white;
+}
+
+ul.footer-link-ul img {
+    width: 25px;
+    height: auto;
+    padding-right: 10px;
+}
+
+.copy-cont {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px 0px;
+    background-color: #5787c2;
+}
+
+@media only screen and (max-width: 800px) {
+    .site-log-cont {
+        width: 100%!important;
+        padding-left: 15px!important;
+    }
+
+    .header-menu .menu-links-cont {
+        display: none!important;
+    }
+
+    .header-menu .menu-dropdown-button {
+        display: table-cell!important;
+    }
+
+    .header-menu .menu-dropdown-button img {
+        margin: 10px 0px 10px 20px!important;
+    }
+
+    .descr-panel-comp {
+        max-width: 500px!important;
+        width: 100%!important;
+    }
+
+    .footer-col-cont {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        padding-bottom: 20px!important;
+    }
+
+    .footer-col {
+        display: block!important;
+        margin-bottom: 30px!important;
+    }
+
+    .copy-cont {
+        font-size: 0.8em!important;
+    }
+}

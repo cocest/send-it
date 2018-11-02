@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SendIT - Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="UI Template" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cocest" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" type="image/png" href="./images/icons/favicon1.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="./images/icons/favicon2.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./images/icons/favicon3.png" sizes="120x120">
+
+        <link rel="stylesheet" href="./css/custom.css">
+        <style type="text/css">
+
+           #main-menu-signup-link {
+               padding: 5px 15px;
+               background-color: chocolate;
+               border-radius: 4px;
+           }
+
+           #main-menu-signup-link:hover {
+               background-color: rgb(189, 112, 57);
+           }
+
+           #dropdown-main-menu-cont {
+               position: fixed;
+               width: 100%;
+               padding-top: 50px;
+               margin-left: -2px;
+               margin-right: -2px;
+               background-color: white;
+               z-index: 300;
+           }
+
+           #dropdown-main-menu-cont.hide {
+               display: none;
+           }
+
+           #dropdown-main-menu-cont.show {
+               display: block;
+           }
+
+           #headline-sec-cont {
+               position: relative;
+               width: 100%;
+               height: 600px;
+           }
+
+           #bg-img-cont {
+               position: absolute;
+               height: inherit;
+               width: 100%;
+               z-index: 50;
+           }
+
+           #headline-cont {
+               position: absolute;
+               left: 0px;
+               height: inherit;
+               max-width: 700px;
+               margin-left: 80px;
+               z-index: 100;
+           }
+
+           #bg-img-cont .bg-img {
+               background-image: url(./images/bg/bg_img2.jpg);
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+               height: inherit;
+               background-color: lightyellow;
+           }
+
+           .headline {
+               display: inline-block;
+               max-width: 560px;
+               margin-top: 180px;
+               padding: 10px;
+               font-size: 2.5em;
+               color: white;
+               background-color: rgba(0,0,0,0.3);
+           }
+
+           .sub-headline {
+               display: inline-block;
+               max-width: 470px;
+               margin-top: 30px;
+               font-size: 1.2em;
+               color: white;
+               padding: 10px;
+               background-color: rgba(0,0,0,0.3);
+           }
+
+           .call-to-action-cont {
+               margin-top: 50px;
+           }
+
+           .open-account-btn {
+               width: 190px;
+               height: 40px;
+               box-sizing: border-box;
+               border: none;
+               border-radius: 2px;
+               font-family: sans-serif;
+               font-size: 1.0em;
+               color: white;
+               background-color: #3d79c1;
+               cursor: pointer;
+           }
+
+           .open-account-btn:hover {
+               background-color: #4e82c2;
+               outline: 1px solid white;
+               border-radius: 2px;
+           }
+
+           .lower-sec-cont {
+               padding-bottom: 50px;
+           }
+
+           .caption-header-cont {
+               text-align: center;
+               max-width: 550px;
+               width: 100%;
+               margin: 0 auto;
+               margin-top: 60px;
+           }
+
+           .caption-header-cont .header-text {
+               font-size: 2.0em;
+           }
+
+           .caption-header-cont .sub-header-text {
+               display: inline-block;
+               max-width: 400px;
+               margin-top: 20px;
+               font-size: 1.2em;
+           }
+
+           .more-about-sendit-cont {
+               margin: 40px 10px 0px 10px;
+           }
+
+           @media only screen and (max-width: 800px) {
+
+               #headline-sec-cont {
+                   text-align: center!important;
+               }
+
+               #headline-cont {
+                   margin-left: 10px!important;
+                   margin-right: 10px!important;
+               }
+
+               .headline {
+                   margin-top: 120px!important;
+               }
+
+               .more-about-sendit-cont {
+                   text-align: center!important;
+                   margin-left: 0px!important;
+                   margin-right: 0px!important;
+               }
+           }
+
+        </style>
+        <script type="text/javascript">
+            function init(){
+                //global variable here
+                let dropdown_main_menu_toggle = false;
+
+                //listen to page scroll event
+                window.onscroll = function(e){
+                    //change the menu bar
+                    changeMainMenuOnScroll();
+                };
+
+                //show or hide mobile main menu
+                window.dropMainMenu = function(e){
+                    if (!dropdown_main_menu_toggle){
+                        dropdown_main_menu_toggle = true
+
+                        //reset header main menu to default
+                        let elem1 = document.querySelector("ul.hr-bar-menu");
+                        let elem2 = document.querySelector("div.header-menu");
+                        elem1.className = "hr-bar-menu hr-bar-menu-fm-1 right-align";
+                        elem2.className = "header-menu hr-menu-th-1";
+
+                        //show menu
+                        elem1 = document.getElementById("dropdown-main-menu-cont");
+                        elem1.className = "show elem-shadow";
+
+                        //show shadow
+                        elem1 = document.getElementById("bg-shade-for-active-menu");
+                        elem1.removeAttribute("class");
+
+                        //disable page from scrolling
+                        elem1 = document.getElementsByTagName("body")[0];
+                        elem1.setAttribute("style", "overflow-y: hidden;");
+
+                    } else {
+                        dropdown_main_menu_toggle = false;
+                        changeMainMenuOnScroll(); //change to current state
+
+                        //hide menu
+                        elem1 = document.getElementById("dropdown-main-menu-cont");
+                        elem1.className = "hide";
+
+                        //hide shadow
+                        elem1 = document.getElementById("bg-shade-for-active-menu");
+                        elem1.className = "remove-elem";
+
+                        //enable page scrolling
+                        elem1 = document.getElementsByTagName("body")[0];
+                        elem1.removeAttribute("style");
+                    }
+                };
+
+                //listen for click event on shadow
+                window.shawdowClicked = function(e){
+                    //hide mobile main menu
+                    dropMainMenu();
+                }
+
+                //change the menu bar on scroll event
+                function changeMainMenuOnScroll(){
+                    let scr_dis = getPageScrollTop();
+                    let elem1 = document.querySelector("ul.hr-bar-menu");
+                    let elem2 = document.querySelector("div.header-menu");
+
+                    //reformat main menu bar
+                    if (scr_dis > 0) {
+                        elem1.className = "hr-bar-menu hr-bar-menu-fm-2 right-align";
+                        elem2.className = "header-menu hr-menu-th-2";
+
+                    } else { //restore previous format
+                        elem1.className = "hr-bar-menu hr-bar-menu-fm-1 right-align";
+                        elem2.className = "header-menu hr-menu-th-1";
+                    }
+                }
+
+                //get page scroll top position
+                function getPageScrollTop(){
+                    return document.body.scrollTop || document.documentElement.scrollTop;
+                }
+            }
+        </script>
+    </head>
+    <body class="center-elem elem-shadow" onload="init()">
+        <!--Header menu-->
+        <div class="header-menu hr-menu-th-1">
+            <nav class="nav-dpl-table">
+                <div class="site-log-cont">
+                    <a href="#"><img class="site" src="./images/logo/img1.png" alt="SendIT Logo"/></a>
+                </div>
+                <div class="menu-links-cont">
+                    <ul class="hr-bar-menu hr-bar-menu-fm-1 right-align">
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                        <li><a id="main-menu-signup-link" href="#">Log In</a></li>
+                    </ul>
+                </div>
+                <div class="menu-dropdown-button" onclick="dropMainMenu()">
+                    <img src="./images/icons/dropdown-menu-icon.png" alt="dropdown menu"/>
+                </div>
+            </nav>
+        </div>
+
+        <!--Mobile dropdown menu-->
+        <div id="dropdown-main-menu-cont" class="hide">
+            <nav class="top-bottom-padding-20">
+                <ul class="vt-bar-menu vt-bar-menu-fm-1">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Background shade when menu is active or clicked-->
+        <div id="bg-shade-for-active-menu" class="remove-elem" onclick="shawdowClicked()"></div>
+
+        <!--Headline section container-->
+        <div id="headline-sec-cont">
+            <div id="bg-img-cont">
+                <div class="bg-img"></div>
+            </div>
+            <div id="headline-cont">
+                <div class="headline">
+                    Fast, flexible and secure service you always want
+                </div>
+                <div class="sub-headline">
+                    Award winning courier service, with no suprise courier quotes, trusted 
+                    and employ by professional like you.
+                </div>
+                <div class="call-to-action-cont">
+                    <button class="open-account-btn">Open Your Account</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Lower section container-->
+        <div class="lower-sec-cont">
+            <div class="caption-header-cont">
+                <div class="header-text">
+                    More about services and SendIT
+                </div>
+                <div class="sub-header-text">
+                    Learn about our shipping services, service requirements and our culture
+                </div>
+            </div>
+            <div class="more-about-sendit-cont">
+                <div class="descr-panel-comp">
+                    <div class="content-cont">
+                        <img src="./images/content/img2.jpg" alt="SendIT delivery bus and a staff"/>
+                        <div class="title">
+                            Shipping Services
+                        </div>
+                        <div class="descr">
+                            The jheyr rjyt jre jehrte ktel ktjel ktjle rktjel rktje rkjte 
+                            the nrktje krtjrt rjtrmt rtkjrt rlkrt ,t, errr ttty rkt tru 
+                            thf jhf jgn gijljhk jhghkj ifyyu.
+                        </div>
+                        <div class="read-more-link">
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="descr-panel-comp">
+                    <div class="content-cont">
+                        <img src="./images/content/img3.jpg" alt="SendIT delivery bus and a staff"/>
+                        <div class="title">
+                            Our Culture and Believe
+                        </div>
+                        <div class="descr">
+                            The jheyr rjyt jre jehrte ktel ktjel ktjle rktjel rktje rkjte 
+                            the nrktje krtjrt rjtrmt rtkjrt rlkrt.
+                        </div>
+                        <div class="read-more-link">
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="descr-panel-comp">
+                    <div class="content-cont">
+                        <img src="./images/content/img1.jpg" alt="SendIT delivery bus and a staff"/>
+                        <div class="title">
+                            Service Requirements
+                        </div>
+                        <div class="descr">
+                            The jheyr rjyt jre jehrte ktel ktjel ktjle rktjel rktje rkjte 
+                            the nrktje krtjrt rjtrmt rtkjrt rlkrt ,t, errr ttty rkt yth
+                            utrt bgyh kgfgk.
+                        </div>
+                        <div class="read-more-link">
+                            <a href="#">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--page footer container-->
+        <div class="footer-container">
+            <div class="footer-col-cont">
+                <div class="footer-col">
+                    <div class="footer-link-heading">FELLOW US</div>
+                    <ul class="footer-link-ul">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Google+</a></li>
+                        <li><a href="#">twitter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-link-heading">TERMS</div>
+                    <ul class="footer-link-ul">
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Service Agreement</a></li>
+                        <li><a href="#">Cookies Statement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-link-heading">CONTACT US</div>
+                    <ul class="footer-link-ul">
+                        <li><a href="#"><img src="./images/icons/email-icon.png" alt="Email"/>officialsendit@gmail.com</a></li>
+                        <li><a href="#"><img src="./images/icons/phone-icon.png" alt="Phone"/>+234 8168849217</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-cont">
+                Copyright &copy; SendIT 2018. All Rights Reserved.
+            </div>
+        </div>
+    </body>
+</html>
