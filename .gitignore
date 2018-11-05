@@ -1,0 +1,2 @@
+# ignore any text file starting with 'cm-', bacause that is a commit message
+cm-*.txt
