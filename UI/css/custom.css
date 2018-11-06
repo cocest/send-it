@@ -1,10 +1,52 @@
 body {
+    position: relative;
     margin: 0px;
     padding: 0px;
     max-width: 1000px;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #4c4e50;
+}
+
+/****UI background color****/
+
+.theme-color-1 {
+    background-color: #5787c2;
+}
+
+.theme-color-2 {
+    background-color: #506c8d;
+}
+
+.theme-color-3 {
+    background-color: #3d79c1;
+}
+
+.theme-color-4 {
+    background-color: white;
+}
+
+/****UI color end****/
+
+/****UI Text color****/
+
+.theme-txt-color-1 {
+    color: white;
+}
+
+.theme-txt-color-2 {
+    color: #5787c2;
+}
+
+/****UI Text color end****/
+
+.hr-menu-th-1 {
+    background-color: #5787c2;
+}
+
+.hr-menu-th-2 {
+    background-color: rgba(61, 121, 193, 0.8);
+    box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.4);
 }
 
 .elem-shadow {
@@ -41,17 +83,33 @@ body {
     display: none!important;
 }
 
-.hr-menu-th-1 {
-    background-color: #5787c2;
+input[type=text],
+input[type=password] {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    background-color: #e3eefc;
 }
 
-.hr-menu-th-2 {
-    background-color: rgba(61, 121, 193, 0.8);
-    box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.4);
+.input-fmt {
+    padding: 0 10px;
+    height: 40px;
+    font-size: 0.95em;
+}
+
+.login-icon-fmt {
+    font-size: 2.0em;
+}
+
+.login-txt-fmt {
+    font-size: 1.0em;
+    position: relative;
+    bottom: 5px;
 }
 
 #bg-shade-for-active-menu {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0.5;
@@ -71,6 +129,7 @@ body {
      display: table-cell; 
      width: 100%;
      padding-right: 10px;
+     vertical-align: middle;
 }
 
 .header-menu .menu-dropdown-button {
@@ -95,6 +154,34 @@ body {
     float: left;
     width: 150px;
     height: auto;
+}
+
+#show-pass-btn {
+    display: table;
+    position: relative;
+    top: 3px;
+    right: 5px;
+    float: right;
+    margin-bottom: -40px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#show-pass-btn.show span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+    color: #77a6e1;
+}
+
+#show-pass-btn.hide span{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+    color: gray;
 }
 
 ul.hr-bar-menu {
@@ -152,7 +239,7 @@ ul.vt-bar-menu-fm-1 a {
     text-decoration: none;
     padding: 15px 25px;
     font-size: 1.0em;
-    color: #4c4e50;;
+    color: #5787c2;
 }
 
 /********description panel component*******/
@@ -203,7 +290,6 @@ ul.vt-bar-menu-fm-1 a {
 /********description panel component end*******/
 
 .footer-container {
-    background-color: #506c8d;
     font-family: sans-serif;
     color: white;
 }
@@ -250,7 +336,6 @@ ul.footer-link-ul img {
     text-align: center;
     font-size: 0.9em;
     padding: 15px 0px;
-    background-color: #5787c2;
 }
 
 @media only screen and (max-width: 800px) {
