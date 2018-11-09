@@ -98,6 +98,10 @@
            }
 
            .open-account-btn {
+               display: table-cell;
+               vertical-align: middle;
+               text-align: center;
+               text-decoration: none;
                width: 190px;
                height: 40px;
                box-sizing: border-box;
@@ -214,19 +218,9 @@
                left: -30px;
            }
 
-           .sigin-btn {
+           .sigin-btn-size {
                width: 100%;
                height: 40px;
-               box-sizing: border-box;
-               border-radius: 4px;
-               border: none;
-               font-family: sans-serif;
-               font-size: 1.0em;
-               color: white;
-           }
-
-           .sigin-btn:hover {
-               opacity: 0.9;
            }
 
            .forgot-pass-link:hover {
@@ -239,6 +233,18 @@
                margin-left: 5px;
                font-size: 1.0em;
                font-weight: 500;
+           }
+
+           #show-pass-btn > span {
+               font-size: 1.2em!important;
+           }
+
+           #show-pass-btn.show > span {
+               color: #77a6e1;
+           }
+
+           #show-pass-btn.hide > span {
+               color: gray;
            }
 
            @media only screen and (max-width: 450px) {
@@ -452,12 +458,12 @@
                     //show password
                     let elem2 = document.getElementById("show-pass-btn");
                     elem1.setAttribute("type", "text");
-                    elem2.className = "show";
+                    elem2.className = "input-marker-left-icon show";
 
                     //hide password
                     setTimeout(() => {
                         elem1.setAttribute("type", "password");
-                        elem2.className = "hide";
+                        elem2.className = "input-marker-left-icon hide";
                     }, 1000)
                 };
 
@@ -508,14 +514,14 @@
         <div class="header-menu hr-menu-th-1">
             <nav class="nav-dpl-table">
                 <div class="site-log-cont">
-                    <a href="#"><img class="site" src="./images/logo/img1.png" alt="SendIT Logo"/></a>
+                    <a href="./index.html"><img class="site" src="./images/logo/img1.png" alt="SendIT Logo"/></a>
                 </div>
                 <div class="menu-links-cont">
                     <ul class="hr-bar-menu hr-bar-menu-fm-1 right-align">
                         <li><a href="#">One</a></li>
                         <li><a href="#">Two</a></li>
                         <li><a href="#">Three</a></li>
-                        <li><a id="main-menu-signup-link" href="#">Sign Up</a></li>
+                        <li><a id="main-menu-signup-link" href="./register/index.html">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="menu-login-cont" onclick="launchLoginPanel()">
@@ -556,7 +562,7 @@
                         <input class="input-fmt theme-txt-color-2" type="text" name="userid" placeholder="USER ID"/>
                     </div>
                     <div class="input-cont">
-                        <div id="show-pass-btn" class="hide" onclick="shownSignPassword()">
+                        <div id="show-pass-btn" class="input-marker-left-icon hide" onclick="shownSignPassword()">
                             <span class="fas fa-eye-slash"></span>
                         </div>
                         <input id="sigin-input-password" class="input-fmt theme-txt-color-2" type="password" name="userpassword" placeholder="PASSWORD"/>
@@ -568,7 +574,7 @@
                         </label>
                         <span class="remember-me-txt theme-txt-color-2">Remember Me</span>
                     </div>
-                    <button type="submit" class="sigin-btn theme-color-3">Sign In</button>
+                    <button type="submit" class="sigin-btn-size button theme-color-3">Sign In</button>
                     <div class="forgot-pass-cont">
                         <a class="forgot-pass-link theme-txt-color-2" href="#">Forgot Your Password?</a>
                     </div>
@@ -593,7 +599,7 @@
                     and employed by professional like you.
                 </div>
                 <div class="call-to-action-cont">
-                    <button class="open-account-btn theme-color-3">Open Your Account</button>
+                    <a href="./register/index.html" class="open-account-btn theme-color-3">Open Your Account</a>
                 </div>
             </div>
         </div>
