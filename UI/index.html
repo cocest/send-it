@@ -16,12 +16,6 @@
 
            #main-menu-signup-link {
                padding: 5px 15px;
-               background-color: chocolate;
-               border-radius: 4px;
-           }
-
-           #main-menu-signup-link:hover {
-               background-color: rgb(189, 112, 57);
            }
 
            #dropdown-main-menu-cont {
@@ -106,7 +100,6 @@
                height: 40px;
                box-sizing: border-box;
                border: none;
-               border-radius: 2px;
                font-family: sans-serif;
                font-size: 1.0em;
                color: white;
@@ -114,9 +107,7 @@
            }
 
            .open-account-btn:hover {
-               background-color: #4e82c2;
                outline: 1px solid white;
-               border-radius: 2px;
            }
 
            .lower-sec-cont {
@@ -521,7 +512,7 @@
                         <li><a href="#">One</a></li>
                         <li><a href="#">Two</a></li>
                         <li><a href="#">Three</a></li>
-                        <li><a id="main-menu-signup-link" href="./register/index.html">Sign Up</a></li>
+                        <li><a id="main-menu-signup-link" class="rounded-corner-4 theme-color-10 clr-hover" href="./register/index.html">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="menu-login-cont" onclick="launchLoginPanel()">
@@ -559,13 +550,13 @@
             <div class="wrapper">
                 <form name="sign-in-form" onsubmit="return processSignInForm(event)">
                     <div class="input-cont">
-                        <input class="input-fmt theme-txt-color-2" type="text" name="userid" placeholder="USER ID"/>
+                        <input class="input-fmt theme-txt-color-2 rounded-corner-4" type="text" name="userid" placeholder="USER ID"/>
                     </div>
                     <div class="input-cont">
                         <div id="show-pass-btn" class="input-marker-left-icon hide" onclick="shownSignPassword()">
                             <span class="fas fa-eye-slash"></span>
                         </div>
-                        <input id="sigin-input-password" class="input-fmt theme-txt-color-2" type="password" name="userpassword" placeholder="PASSWORD"/>
+                        <input id="sigin-input-password" class="input-fmt theme-txt-color-2 rounded-corner-4" type="password" name="userpassword" placeholder="PASSWORD"/>
                     </div>
                     <div class="input-cont">
                         <input id="remember-me-check-btn" type="checkbox" name="rememberme" value="1" />
@@ -574,7 +565,7 @@
                         </label>
                         <span class="remember-me-txt theme-txt-color-2">Remember Me</span>
                     </div>
-                    <button type="submit" class="sigin-btn-size button theme-color-3">Sign In</button>
+                    <button type="submit" class="sigin-btn-size button theme-color-3 clr-hover rounded-corner-4">Sign In</button>
                     <div class="forgot-pass-cont">
                         <a class="forgot-pass-link theme-txt-color-2" href="#">Forgot Your Password?</a>
                     </div>
@@ -599,7 +590,7 @@
                     and employed by professional like you.
                 </div>
                 <div class="call-to-action-cont">
-                    <a href="./register/index.html" class="open-account-btn theme-color-3">Open Your Account</a>
+                    <a href="./register/index.html" class="open-account-btn theme-color-3 clr-hover">Open Your Account</a>
                 </div>
             </div>
         </div>
