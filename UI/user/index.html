@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SendIT - Account</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="UI Template" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cocest" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" type="image/png" href="../images/icons/favicon1.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="../images/icons/favicon2.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../images/icons/favicon3.png" sizes="120x120">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/custom.css">
+        <style type="text/css">
+
+            .header-menu {
+                display: table;
+            }
+            
+            .header-menu .menu-logout-cont {
+                display: table-cell;
+                min-width: 105px;
+                width: 130px;
+                text-align: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                vertical-align: middle;
+            }
+
+            .menu-logout-cont > a {
+                text-decoration: none;
+            }
+
+            #side-menu-cont {
+                position: fixed;
+                width: 300px;
+                height: 100%;
+                padding-top: 70px;
+                overflow: auto;
+            }
+
+            #side-menu-cont .wrapper {
+                padding: 20px 10px 10px 10px;
+            }
+
+            #page-content-cont {
+                margin-left: 300px;
+                padding: 80px 10px 10px 10px;
+                overflow: hidden;
+                height: 800px;
+            }
+
+            ul.vt-bar-menu.link-fmt a {
+                display: table-cell;
+                text-align: left;
+                text-decoration: none;
+                vertical-align: middle;
+                padding-left: 20px;
+            }
+
+            .tab-menu {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 1.0em;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            .tab-menu.active {
+                position: relative;
+                top: 1px;
+                border: 1px solid lightgray;
+                border-bottom: none;
+                border-top: 4px solid #3d79c1;
+                z-index: 150;
+            }
+
+            .tab-content-cont {
+                position: relative;
+                border: 1px solid lightgray;
+                z-index: 100;
+            }
+
+            .tab-cont {
+                overflow: hidden;
+            }
+
+            table {
+                width: 100%;
+                min-width: 700px;
+            }
+
+            table, th, td {
+                border-collapse: collapse;
+            }
+
+            th {
+                padding: 8px;
+                text-align: center;
+            }
+
+            td {
+                padding: 8px 10px;
+                text-align: left;
+            }
+
+            table.tbl-border-color {
+                border: 1px solid #5787c2;
+            }
+
+            table.tbl-border-color th {
+                border: 1px solid #5787c2;
+            }
+
+            table.tbl-border-color td {
+                border: 1px solid #5787c2;
+            }
+
+            table.tbl-hd-txt-fmt th {
+                font-size: 1.0em;
+                font-weight: normal;
+            }
+
+            table th.tbl-col-w-100 {
+                width: 100px;
+            }
+
+            table th.tbl-col-w-80 {
+                width: 80px;
+            }
+
+            .list-nav-bar-cont {
+                display: table;
+                float: right;
+                width: 100%;
+                max-width: 500px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #bfcee0;
+            }
+
+            .list-nav-bar-cont .wrapper-1 {
+                float: left;
+                margin: 10px;
+            }
+
+            .list-nav-bar-cont .wrapper-2 {
+                float: right;
+                margin: 10px;
+            }
+
+            .list-nav-bar-cont .wrapper-1 .search-input {
+                width: 130px;
+            }
+
+            .list-nav-bar-cont .wrapper-1 .search-btn {
+                width: 80px;
+                font-size: 0.95em;
+            }
+
+            .list-nav-bar-cont .wrapper-2 #goto-parcel-del {
+                width: 60px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .list-nav-bar-cont .wrapper-2 .goto-btn {
+                font-size: 0.95em;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .action-btn {
+                font-size: 0.9em;
+                width: 80px;
+            }
+
+            .action-btn span:last-child {
+                padding-left: 5px;
+            }
+
+            #cancel-parcel-delivery-box {
+                position: fixed;
+                top: 20%;
+                left: 50%;
+                margin-left: -200px;
+                width: 100%;
+                min-width: 300px;
+                max-width: 400px;
+                border: 1px solid lightgray;
+                z-index: 600;
+            }
+
+            #change-parcel-delivery-destination-win {
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                margin-left: -200px;
+                width: 100%;
+                min-width: 250px;
+                max-width: 400px;
+                border: 1px solid lightgray;
+                z-index: 650;
+            }
+
+            #cancel-parcel-delivery-box .title-bar,
+            #change-parcel-delivery-destination-win .title-bar {
+                display: table;
+                width: 100%;
+            }
+
+            #cancel-parcel-delivery-box .title-bar .title-cont,
+            #change-parcel-delivery-destination-win .title-bar .title-cont {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 20px;
+            }
+
+            #cancel-parcel-delivery-box .title-bar .btn-cont,
+            #change-parcel-delivery-destination-win .title-bar .btn-cont {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: right;
+                width: 50px;
+                padding-right: 10px;
+            }
+           
+            #cancel-parcel-delivery-box .title-bar .btn-cont span,
+            #change-parcel-delivery-destination-win .title-bar .btn-cont span {
+                font-size: 1.5em;
+                cursor: pointer;
+            }
+
+            #cancel-parcel-delivery-box .body {
+                padding: 0px 10px 40px 10px;
+            }
+
+            #change-parcel-delivery-destination-win .body {
+                padding: 30px 10px 10px 10px;
+                overflow-y: auto;
+            }
+
+            #cancel-parcel-delivery-box .footer {
+                padding: 10px;
+                text-align: right;
+            }
+
+            #cancel-parcel-delivery-box .footer .ok-btn {
+                width: 60px;
+                font-size: 0.95em;
+                margin-right: 5px;
+            }
+
+            #cancel-parcel-delivery-box .footer .cancel-btn {
+                width: 80px;
+                font-size: 0.95em;
+            }
+
+            #change-parcel-delivery-destination-win .footer-btn-cont {
+                padding: 20px 0px 10px 0px;
+                text-align: right;
+            }
+
+            #change-parcel-delivery-destination-win .footer-btn-cont .cancel-btn {
+                width: 80px;
+                font-size: 0.95em;
+                margin-right: 5px;
+            }
+
+            #change-parcel-delivery-destination-win .footer-btn-cont .apply-btn {
+                width: 80px;
+                font-size: 0.95em;
+            }
+
+            .form-input-group {
+                margin-bottom: 15px;
+            }
+
+            .form-cont {
+                margin-top: 30px;
+            }
+
+            .form-input-state-cont {
+                display: table-cell;
+                width: 60%;
+                padding-right: 8px;
+            }
+
+            .form-input-zip-cont {
+                display: table-cell;
+                width: 40%;
+            }
+
+            .input-fmt {
+                height: 30px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        </style>
+        <script type="text/javascript">
+            function init() {
+                const goto_input_elem = document.getElementById("goto-parcel-del"); //search input
+                let delivery_order_view_count = 3; //default
+                let delivery_order_length = 14; //number of parcel order yet to deliverd
+                let current_page = 1; //use this variable to hold current page
+                let combo_box_active_menu_handler = null;
+                let combo_box_menu_sync = 0;
+                let current_parcel_delivery_id;
+
+                //search for active parcel delivery
+                window.searchParcelDelivery = function() {
+                    //code here
+                };
+
+                //listen to goto to particular parcel enter event
+                goto_input_elem.onkeypress = function(e)  {
+                    let keycode = (e.keyCode ? e.keyCode : e.which);
+
+                    if (keycode == "13") {
+                        navigateParcelDeliveryOrderPage(e.currentTarget.value);
+                    }
+                };
+
+                //listen to next parcel delivery click event
+                window.nextParcelDelivery = function(e) {
+                    //check if is not last page
+                    if (current_page + 1 <= getPageCount(delivery_order_view_count, delivery_order_length)) {
+                        navigateParcelDeliveryOrderPage(current_page + 1);
+                    }
+                };
+
+                //listen to previous parcel delivery click event
+                window.prevParcelDelivery = function(e) {
+                    if (current_page - 1 > 0) {
+                        navigateParcelDeliveryOrderPage(current_page - 1);
+                    }
+                };
+
+                //utility function for navigating through parcel delivery order page
+                function navigateParcelDeliveryOrderPage(goto) {
+                    let goto_page = parseInt(goto);
+
+                    if (goto_page && goto_page > 0 && 
+                        goto_page < getPageCount(delivery_order_view_count, delivery_order_length) + 1) {
+                            
+                        let list_start_index = (goto_page * delivery_order_view_count) - delivery_order_view_count; //index to start from and list to view
+                        
+                        //create table row from list and append to table
+                        listParcelDeliveryOrder(list_start_index, delivery_order_view_count);
+
+                        current_page = goto_page; //set current page
+
+                        //update goto input value
+                        goto_input_elem.value = current_page;
+
+                    } else {
+                        //reset user entered number to previous number
+                        //code here
+
+                        //update goto input value
+                        goto_input_elem.value = current_page;
+                    }
+                }
+
+                //create table row from list and append to table
+                function listParcelDeliveryOrder(start_index, count) {
+                    //do the appendment here
+                }
+
+                //utility function to calculate number of pages base on view count
+                function getPageCount(view_count, count) {
+                    if (view_count >= count) {
+                        return 1;
+
+                    } else {
+                        let temp_num = count / view_count;
+
+                        if (temp_num % 1 == 0) {
+                            return temp_num;
+                        } else {
+                            return parseInt(temp_num) + 1;
+                        }
+                    }
+                }
+
+                //utility function for calculating list start index for a page. 
+                //This function is important if we search list and want to use 
+                //the index of the found item.
+                function getListStartIndex(view_count, count, index) {
+                    let counter = 0;
+
+                    while (counter < count) {
+                        
+
+                        if (counter <= index && (counter + view_count) > index) {
+                            return counter;
+                        }
+
+                        counter += view_count;
+                    }
+
+                    return 0; //not found
+                }
+
+                //utility function to remove all child element
+                function removeAllChildElement(parent) {
+                    while (parent.firstChild) {
+                        parent.removeChild(parent.firstChild);
+                    }
+
+                    //OR 
+
+                    /*
+                    //this method is slower
+                    parent.innerHTML = "";
+                    */
+                }
+
+                /****************************************
+                **********ComboBoxMenu section***********
+                *****************************************/
+
+                //listen on click event on page
+                document.body.onclick = function(e) {
+                    if (combo_box_menu_sync == 0) { //close menu
+                        if (combo_box_active_menu_handler !== null) {
+                            //close menu opened by another combo box menu
+                            closeComboBoxActiveMneu();
+                        }
+
+                    } else { //menu close by combo box button
+                        combo_box_menu_sync = 0;
+                    }
+                };
+
+                window.comboBoxMenu = function(menu_id) {
+                    let elem = document.getElementById(menu_id);
+
+                    //check if is not this combo box that opened menu if any
+                    if (elem !== combo_box_active_menu_handler) {
+                        //close menu opened by another combo box menu
+                        closeComboBoxActiveMneu();
+                    }
+
+                    //check menu state
+                    if (elem.getAttribute("state") == "0") { //show menu
+                        elem.setAttribute("state", "1");
+                        elem.className = "combo-box-menu theme-color-4 elem-shadow";
+                        combo_box_active_menu_handler = elem;
+
+                    } else { //close menu
+                        elem.setAttribute("state", "0");
+                        elem.className = "combo-box-menu theme-color-4 elem-shadow remove-elem";
+                    }
+
+                    combo_box_menu_sync = 1;
+                };
+
+                //launch window where change can be made
+                window.changeParcelDeliveryDestination = function(parcel_id) {
+                    //set parcel id to know which package to cancel
+                    current_parcel_delivery_id = parcel_id;
+
+                    //get window refrence
+                    let elem1 = document.getElementById("change-parcel-delivery-destination-win");
+
+                    //show dialog box
+                    elem1.className = "theme-color-4 elem-shadow";
+
+                    //put your code here
+                };
+
+                //change delivery destination
+                function processChangeParcelDeliveryDestination(win_id, win_btn) {
+                    //close dialog box
+                    let elem = document.getElementById(win_id);
+                    elem.className = "theme-color-4 elem-shadow remove-elem";
+
+                    //processing input
+                    if (win_btn == 'ok') {
+                        //do other processing here
+                        console.log("Changing location of delivery: " + current_parcel_delivery_id);
+
+                    } else {
+                        console.log("Change delivery canceled");
+                    }
+                }
+
+                //prompt the user if he is sure to cancel the delivery
+                window.cancelParcelDelivery = function(parcel_id) {
+                    //set parcel id to know which package to cancel
+                    current_parcel_delivery_id = parcel_id;
+
+                    //get dialog refrence
+                    let elem1 = document.getElementById("cancel-parcel-delivery-box");
+
+                    //set dialog message, it can be text or html
+                    let elem2 = elem1.querySelector(".body .msg");
+                    elem2.innerHTML = `Are you sure you want to cancel parcel order of ID: ${parcel_id}`;
+
+                    //show dialog box
+                    elem1.className = "theme-color-4 elem-shadow";
+                };
+                
+                //cancel parcel delivery order
+                function processCancelParcelDelivery(win_id, win_btn) {
+                    //close dialog box
+                    let elem = document.getElementById(win_id);
+                    elem.className = "theme-color-4 elem-shadow remove-elem";
+
+                    //processing input
+                    if (win_btn == 'ok') {
+                        //do other processing here
+                        console.log("Cancelling Parcel ID: " + current_parcel_delivery_id);
+
+                    } else {
+                        console.log("Cancel parcel comfirm dialog closed");
+                    }
+                }
+
+                //close menu opened by another combo box menu
+                function closeComboBoxActiveMneu() {
+                    if (combo_box_active_menu_handler !== null) {
+                        combo_box_active_menu_handler.setAttribute("state", "0");
+                        combo_box_active_menu_handler.className = "combo-box-menu theme-color-4 elem-shadow remove-elem";
+                        combo_box_active_menu_handler = null;
+                    }
+                }
+
+                /********************************************
+                **********Window and dialog section**********
+                ********************************************/
+
+                //process dialog or window button event, like close, ok and cancel
+                window.closeWindow = function(win_id, win_btn) {
+                    switch (win_id) {
+                        
+                        case 'cancel-parcel-delivery-box':
+
+                            if (win_btn == 'ok') {
+                                //cancel parcel delivery order
+                                processCancelParcelDelivery(win_id, win_btn);
+
+                            } else if (win_btn == 'cancel') {
+                                //don't cancel parcel delivery order
+                                processCancelParcelDelivery(win_id, win_btn);
+
+                            } else if (win_btn == 'close') {
+                                //don't cancel parcel delivery order
+                                processCancelParcelDelivery(win_id, win_btn);
+                            }
+
+                            break;
+
+                        case 'change-parcel-delivery-destination-win':
+
+                            if (win_btn == 'cancel') {
+                                //cancel the change
+                                processChangeParcelDeliveryDestination(win_id, win_btn)
+
+                            } else if (win_btn == 'close') {
+                                //cancel the change
+                                processChangeParcelDeliveryDestination(win_id, win_btn)
+                            }
+
+                            break;
+
+                        default:
+                            //shouldn't be here
+                    }
+                };
+
+                //adapt change delivery destination window when page is resized
+                function adaptChangeDeliveryDestinationWindow() {
+                    let elem1 = document.getElementById("change-parcel-delivery-destination-win");
+                    let elem2 = elem1.querySelector(".title-bar");
+                    let elem3 = elem1.querySelector(".body");
+
+                    let win_height = 473; //window total height
+                    let body_top_and_bottom_padding = 40; //body top padding + bottom padding
+
+                    //calculate window new height
+                    let ds = window.innerHeight - (elem1.offsetTop + win_height);
+                    let nh = (window.innerHeight - elem1.offsetTop) - (elem2.offsetHeight + body_top_and_bottom_padding);
+                    
+                    //check if we need to resize the window height
+                    if ((ds - body_top_and_bottom_padding) <= 0) {
+                        //set height
+                        elem3.setAttribute("style", "height: " + (nh - 20) + "px;");
+
+                    } else {
+                        elem3.removeAttribute("style");
+                    }
+                }
+
+                /********************************************
+                ***************Tabe section******************
+                ********************************************/
+
+                let current_switch_tab_handler = document.getElementById("tab-cont-1");
+
+                //switch tab container
+                window.switchTabContainer = function(switch_tab_id, btn_ref) {
+                    let elem = document.getElementById(switch_tab_id);
+                    
+                    //exit if is the same tab menu
+                    if (current_switch_tab_handler == elem) {
+                        return;
+                    }
+                    
+                    //hide current tab view
+                    current_switch_tab_handler.className = "remove-elem";
+
+                    //change current tab menu
+                    btn_ref.className = "tab-menu active elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4";
+
+                    //switch to click tab view
+                    elem.className = "tab-cont";
+
+                    current_switch_tab_handler = elem;
+
+                    if (switch_tab_id == "tab-cont-1") {
+                        elem = document.getElementById("tab-menu-2");
+
+                        //change tab menu to active
+                        elem.className = "tab-menu elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4";
+
+                    } else {
+                        elem = document.getElementById("tab-menu-1");
+
+                        //change tab menu to active
+                        elem.className = "tab-menu elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4";
+                    }
+                };
+                
+                //listen to page resize event
+                window.onresize = function(e) {
+                    adaptChangeDeliveryDestinationWindow();
+                };
+
+                //process change delivery form
+                window.processChangeDeliveryForm = function(e) {
+                    e.preventDefault();
+                    
+                    //change delivery destination
+                    processChangeParcelDeliveryDestination('change-parcel-delivery-destination-win', 'ok');
+
+                    //other code here
+                };
+                
+                //adapt change delivery destination window when page is resized
+                adaptChangeDeliveryDestinationWindow();
+
+            }
+        </script>
+    </head>
+    <body class="center-elem elem-shadow" onload="init()">
+        <!--Header menu bar-->
+        <div class="header-menu hd-menu-height-70 theme-color-1">
+            <div class="site-log-cont">
+                <a href="../index.html"><img class="site" src="../images/logo/img1.png" alt="SendIT Logo"/></a>
+            </div>
+            <div class="menu-logout-cont">
+                <a href="#">
+                    <ul class="hr-bar-menu">
+                        <li>
+                            <span class="fas fa-user-circle login-icon-fmt theme-txt-color-1"></span>
+                        </li>
+                        <li>
+                            <span class="login-txt-fmt theme-txt-color-1">Logout</span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+
+        <!--side menu container-->
+        <div id="side-menu-cont" class="theme-color-2">
+            <div class="wrapper">
+                <ul class="vt-bar-menu list-fmt link-fmt">
+                    <li class="rounded-corner-4 theme-color-9 clr-hover">
+                        <a class="elem-height-40 theme-txt-color-1" href="#">Parcel Delivery</a>
+                    </li>
+                    <li>
+                        <a  class="elem-height-40 theme-txt-color-6 txt-clr-hover" href="#">My Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--page content container-->
+        <div id="page-content-cont">
+            <!--tabe menu-->
+            <div>
+                <ul class="hr-bar-menu">
+                    <li>
+                        <div id="tab-menu-1" onclick="switchTabContainer('tab-cont-1', this)" class="tab-menu active elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4">My Order</div>
+                    </li>
+                    <li>
+                        <div id="tab-menu-2" onclick="switchTabContainer('tab-cont-2', this)" class="tab-menu elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4">Create Order</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!--tab content container-->
+            <div class="tab-content-cont theme-color-4">
+                <!--My Order-->
+                <div id="tab-cont-1" class="tab-cont">
+                    <div class="table-wrapper top-margin-60">
+                        <table id="parcel-delivery-order-tbl" class="tbl-border-color tbl-hd-txt-fmt">
+                            <!--Table's rows below suppose to be auto generated by script.
+                                Use predefined script above at head section to append rows to this table. 
+                                You already have some utility function you can use.
+                                Note: The appended table row should look exactly like rows below.
+
+                                You are free to remove the message when done
+                            -->
+                            <tr>
+                                <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">Parcel ID</th>
+                                <th class="theme-color-1 theme-txt-color-1">Pickup Location</th>
+                                <th class="theme-color-1 theme-txt-color-1">Destination</th>
+                                <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">Price</th>
+                                <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1"></th>
+                            </tr>
+                            <tr>
+                                <td>35643486</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>N860</td>
+                                <td class="center-align">
+                                    <button class="action-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover" onclick="comboBoxMenu('cbm1')">
+                                        <span>Action</span>
+                                        <span class="fas fa-caret-down"></span>
+                                    </button>
+                                    <!--combo box button drop down menu-->
+                                    <div id="cbm1" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                        <ul class="vt-bar-menu">
+                                            <li class="elem-height-35" onclick="changeParcelDeliveryDestination('35643486')">
+                                                <span>Change destination</span>
+                                            </li>
+                                            <li class="elem-height-35" onclick="cancelParcelDelivery('35643486')">
+                                                <span>Cancel order</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>84739285</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>N12800</td>
+                                <td class="center-align">
+                                    <button class="action-btn  button rounded-corner-4 elem-height-30 theme-color-11 clr-hover" onclick="comboBoxMenu('cbm2')">
+                                        <span>Action</span>
+                                        <span class="fas fa-caret-down"></span>
+                                    </button>
+                                    <!--combo box button drop down menu-->
+                                    <div id="cbm2" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                        <ul class="vt-bar-menu">
+                                            <li class="elem-height-35" onclick="changeParcelDeliveryDestination('84739285')">
+                                                <span>Change destination</span>
+                                            </li>
+                                            <li class="elem-height-35" onclick="cancelParcelDelivery('84739285')">
+                                                <span>Cancel order</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>27365814</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>kgn kghlj mhblmn mnvbn</td>
+                                <td>N375620</td>
+                                <td class="center-align">
+                                    <button class="action-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover" onclick="comboBoxMenu('cbm3')">
+                                        <span>Action</span>
+                                        <span class="fas fa-caret-down"></span>
+                                    </button>
+                                    <!--combo box button drop down menu-->
+                                    <div id="cbm3" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                        <ul class="vt-bar-menu">
+                                            <li class="elem-height-35" onclick="changeParcelDeliveryDestination('27365814')">
+                                                <span>Change destination</span>
+                                            </li>
+                                            <li class="elem-height-35" onclick="cancelParcelDelivery('27365814')">
+                                                <span>Cancel order</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--list navigation bar container-->
+                    <div class="list-nav-bar-cont size-elem top-margin-30 rounded-corner-4 theme-color-4">
+                        <div class="wrapper-1">
+                            <ul class="hr-bar-menu">
+                                <li>
+                                    <input class="search-input input-fmt elem-height-30 rounded-corner-4" type="text" placeholder="Parcel ID"/>
+                                </li>
+                                <li>
+                                    <button class="search-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="searchParcelDelivery()">Search</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-2">
+                            <ul class="hr-bar-menu">
+                                <li>
+                                    <button class="goto-btn button elem-height-30 elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="prevParcelDelivery()">Prev</button>
+                                </li>
+                                <li>
+                                    <input id="goto-parcel-del" class="elem-height-30 rounded-corner-4" type="text" value="1">
+                                    <label for="goto-parcel-del">of 5</label>
+                                </li>
+                                <li>
+                                    <button class="goto-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="nextParcelDelivery()">Next</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Create Order-->
+                <div id="tab-cont-2" class="tab-cont remove-elem">
+                    //code here
+                </div>
+            </div>
+        </div>
+
+        <!--section below contain all the dialog boxes and windows-->
+
+        <!--cancel parcel delivery box-->
+        <div id="cancel-parcel-delivery-box" class="theme-color-4 elem-shadow remove-elem">
+            <div class="title-bar elem-height-35 theme-txt-color-1 theme-color-1">
+                <div class="title-cont">
+                    <span>Cancel Parcel Order</span>
+                </div>
+                <div class="btn-cont" onclick="closeWindow('cancel-parcel-delivery-box', 'close')">
+                    <span class="far fa-window-close"></span>
+                </div>
+            </div>
+            <div class="body">
+                <div class="msg">Message added by script</div>
+            </div>
+            <div class="footer">
+                <button class="ok-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover" onclick="closeWindow('cancel-parcel-delivery-box', 'ok')">Ok</button>
+                <button class="cancel-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover" onclick="closeWindow('cancel-parcel-delivery-box', 'cancel')">Cancel</button>
+            </div>
+        </div>
+
+        <!--change parcel delivery destination-->
+        <div id="change-parcel-delivery-destination-win" class="theme-color-4 elem-shadow remove-elem">
+            <div class="title-bar elem-height-35 theme-txt-color-1 theme-color-1">
+                <div class="title-cont">
+                    <span>Change Delivery Destination</span>
+                </div>
+                <div class="btn-cont" onclick="closeWindow('change-parcel-delivery-destination-win', 'close')">
+                    <span class="far fa-window-close"></span>
+                </div>
+            </div>
+            <div class="body">
+                <div class="caption-txt-3 left-right-margin">
+                    Delivery Address
+                </div>
+                <div class="form-cont left-right-margin">
+                    <form name="sign-up-form" onsubmit="return processChangeDeliveryForm(event)">
+                        <div class="form-input-group">
+                            <label class="label-fmt-b-2 theme-txt-color-2" for="address-1">Street Address 1</label>
+                                <input class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="address-1" type="text" name="address1" placeholder="Address Line 1">
+                            </div>
+                        <div class="form-input-group">
+                            <label class="label-fmt-b-2 theme-txt-color-2" for="address-2">Street Address 2</label>
+                            <input class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="address-2" type="text" name="address2" placeholder="Address Line 2">
+                        </div>
+                        <div class="form-input-group">
+                            <label class="label-fmt-b-2 theme-txt-color-2" for="country">
+                                Country/Territory
+                            </label>
+                            <select class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="country" class="input-fmt theme-txt-color-2" name="country">
+                                <option value="Kenya">Kenya</option>
+                                <option value="Liberia">Liberia</option>
+                                <option value="Namibia">Namibia</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Cameron">Cameron</option>
+                                <option value="United State of America">U.S.A</option>
+                                <option value="China">China</option>
+                            </select>
+                        </div>
+                        <div class="form-input-group">
+                            <label class="label-fmt-b-2 theme-txt-color-2" for="city">City/Town</label>
+                            <input class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="city" type="text" name="city">
+                        </div>
+                        <div class="form-input-group">
+                            <div class="form-input-state-cont">
+                                <label class="label-fmt-b-2 theme-txt-color-2" for="state">State/Province</label>
+                                <input class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="state" type="text" name="state">
+                            </div>
+                            <div class="form-input-zip-cont">
+                                <label class="label-fmt-b-2 theme-txt-color-2" for="zip-code">
+                                    ZIP/Postal code
+                                </label>
+                                <input class="input-fmt elem-height-35 rounded-corner-4 top-margin-5 theme-txt-color-2" id="zip-code" class="input-fmt theme-txt-color-2" type="text" name="zipcode"/>
+                            </div>
+                        </div>
+                        <div class="footer-btn-cont">
+                            <button class="cancel-btn button elem-height-35 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" type="button" onclick="closeWindow('change-parcel-delivery-destination-win', 'cancel')">Cancel</button>
+                            <button class="apply-btn button elem-height-35 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" type="submit">Apply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
