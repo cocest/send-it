@@ -48,7 +48,7 @@
                 margin-left: 300px;
                 padding: 80px 10px 10px 10px;
                 overflow: hidden;
-                height: 800px;
+                height: 1000px;
             }
 
             ul.vt-bar-menu.link-fmt a {
@@ -106,6 +106,30 @@
             td {
                 padding: 8px 10px;
                 text-align: left;
+            }
+
+            table.tbl-single-bolder-color-1 {
+                border: 1px solid gray;
+            }
+
+            table.tbl-single-bolder-color-2 {
+                border: 1px solid #5787c2;
+            }
+
+            .tbl-top-b-border-color {
+                border-top: 2px solid #5787c2;
+            }
+
+            .tbl-top-b-border-color th {
+                border-top: 2px solid #5787c2;
+            }
+
+            .tbl-top-b-border-color td {
+                border-top: 2px solid #5787c2;
+            }
+
+            .tbl-top-b-border-color tr {
+                border-top: 2px solid #5787c2;
             }
 
             table.tbl-border-color {
@@ -302,6 +326,223 @@
                 padding-right: 10px;
             }
 
+            input[type=checkbox].hide-check-btn {
+                width: 1px;
+                height: 1px;
+                margin: 0;
+                padding: 0;
+                opacity: 0;
+            }
+
+            input[type=checkbox].custom-check-btn + label {
+                display: inline-block;
+                position: relative;
+                bottom: -3px;
+                width: 20px;
+                height: 20px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            input[type=checkbox].custom-check-btn:checked + label > img {
+                position: relative;
+                left: -30px;
+            } 
+
+            .create-parcel-wrapper {
+                margin: 15px;
+            }
+
+            .create-parcel-wrapper .descr-txt-cont {
+                width: 100%;
+                max-width: 450px;
+                font-size: 1.1em;
+            }
+
+            #choose-delivery-time {
+                max-width: 350px;
+            }
+
+            .parcel-dm-input-cont {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .parcel-dm-input-wrapper {
+                display: table-cell;
+                padding-right: 8px;
+            }
+
+            .parcel-dm-input-wrapper:last-child {
+                padding-right: 0px;
+            }
+
+            .input-in-padding {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .parcel-weight-input-cont{
+                display: table;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .parcel-weight-input-cont > label {
+                display: table-cell;
+                width: 80px;
+            }
+
+            .parcel-weight-input-cont > input {
+                display: table-cell;
+                width: 100%;
+            }
+
+            .create-parcel-nav-cont {
+                text-align: right;
+                margin-top: 100px;
+            }
+
+            .create-parcel-nav-cont .cancel-btn {
+                width: 100px;
+                margin-right: 8px;
+                font-size: 1.0em;
+            }
+
+            .create-parcel-nav-cont .next-btn {
+                width: 100px;
+                font-size: 1.0em;
+            }
+
+            .parcel-addr-cont {
+                display: table;
+                width: 100%;
+                max-width: 750px;
+            }
+
+            .parcel-addr-cont .pua-section,
+            .parcel-addr-cont .da-section {
+                display: table-cell;
+                width: 50%;
+                max-width: 400px;
+                margin-bottom: 50px;
+            }
+
+            .pickup-addr-input-wrapper {
+                min-width: 330px;
+                padding-right: 15px;
+            }
+
+            .delivery-addr-input-wrapper {
+                min-width: 330px;
+                padding-left: 15px;
+            }
+
+            .caption-pua-cont, 
+            .caption-da-cont {
+                position: relative;
+                top: 11px;
+                left: 20px;
+                width: 150px;
+                text-align: center;
+            }
+
+            .pickup-addr-input-in-wrapper, 
+            .delivery-addr-input-in-wrapper {
+                padding: 50px 15px 15px 15px;
+                border:1px solid #5787c2;
+            }
+
+            .form-input-area-cont {
+                display: table-cell;
+                width: 40%;
+                padding-right: 8px;
+            }
+
+            .form-input-phone-cont {
+                display: table-cell;
+                width: 60%;
+            }
+
+            .parcel-order-summary-tbl {
+                width: 100%;
+                min-width: 200px;
+                max-width: 400px;
+            }
+
+            .parcel-order-payment-cont {
+                width: 100%;
+                max-width: 400px;
+                min-width: 300px;
+            }
+
+            .parcel-order-payment-cont .wrapper {
+                display: table;
+                width: 100%;
+            }
+
+            .parcel-order-payment-cont .expir-date-wrapper {
+                display: table-cell;
+                width: 60%;
+                padding-right: 8px;
+            }
+
+            .parcel-order-payment-cont .security-code-wrapper {
+                display: table-cell;
+                width: 40%;
+            }
+
+            .parcel-order-payment-cont .expir-date-wrapper .month {
+                display: table-cell;
+                width: 50%;
+            }
+
+            .parcel-order-payment-cont .expir-date-wrapper .year {
+                display: table-cell;
+                width: 50%;
+            }
+
+            .place-order-btn {
+                font-size: 0.95em;
+                width: 120px;
+                margin-right: 8px;
+            }
+
+            .parcel-order-payment-cont .caption {
+                position: relative;
+                top: 11px;
+                left: 25px;
+                width: 235px;
+                text-align: center;
+            }
+
+            .parcel-order-payment-cont .container {
+                padding: 35px 10px 10px 10px;
+                border: 1px solid #5787c2;
+            }
+
+            .place-order-cancel-btn {
+                width: 110px;
+            }
+
+            .parcel-payment-input-icon-cont {
+                display: table;
+                position: relative;
+                top: 28px;
+                right: 6px;
+                float: right;
+                margin-bottom: -40px;
+                width: 35px;
+                height: 35px;
+            }
+
+            .parcel-payment-input-icon-cont > span {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                font-size: 1.5em;
+            }
+
         </style>
         <script type="text/javascript">
             function init() {
@@ -312,14 +553,39 @@
                 let combo_box_active_menu_handler = null;
                 let combo_box_menu_sync = 0;
                 let current_parcel_delivery_id;
+                let window_is_opened = false;
+
+                //this make the launch dialog modal
+                function forceModal(enable = true) {
+                    if (window_is_opened) {
+                        return true;
+
+                    } else if (enable) {
+                        window_is_opened = true;
+                        return false;
+                    }
+                }
+
+                //disable modal
+                function disableModal() {
+                    window_is_opened = false;
+                }
 
                 //search for active parcel delivery
                 window.searchParcelDelivery = function() {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     //code here
                 };
 
                 //listen to goto to particular parcel enter event
                 goto_input_elem.onkeypress = function(e)  {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     let keycode = (e.keyCode ? e.keyCode : e.which);
 
                     if (keycode == "13") {
@@ -329,6 +595,10 @@
 
                 //listen to next parcel delivery click event
                 window.nextParcelDelivery = function(e) {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     //check if is not last page
                     if (current_page + 1 <= getPageCount(delivery_order_view_count, delivery_order_length)) {
                         navigateParcelDeliveryOrderPage(current_page + 1);
@@ -337,6 +607,10 @@
 
                 //listen to previous parcel delivery click event
                 window.prevParcelDelivery = function(e) {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     if (current_page - 1 > 0) {
                         navigateParcelDeliveryOrderPage(current_page - 1);
                     }
@@ -422,6 +696,13 @@
                     */
                 }
 
+                //utility function for resetting form input to default state
+                function resetForm(forms_name) {
+                    for (let i = 0; i < forms_name.length; i++) {
+                        document.forms[forms_name[i]].reset();
+                    }
+                }
+
                 /****************************************
                 **********ComboBoxMenu section***********
                 *****************************************/
@@ -440,6 +721,10 @@
                 };
 
                 window.comboBoxMenu = function(menu_id) {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     let elem = document.getElementById(menu_id);
 
                     //check if is not this combo box that opened menu if any
@@ -464,6 +749,10 @@
 
                 //launch window where change can be made
                 window.changeParcelDeliveryDestination = function(parcel_id) {
+                    if (forceModal()) {
+                        return;
+                    }
+
                     //set parcel id to know which package to cancel
                     current_parcel_delivery_id = parcel_id;
 
@@ -494,6 +783,10 @@
 
                 //prompt the user if he is sure to cancel the delivery
                 window.cancelParcelDelivery = function(parcel_id) {
+                    if (forceModal()) {
+                        return;
+                    }
+                    
                     //set parcel id to know which package to cancel
                     current_parcel_delivery_id = parcel_id;
 
@@ -539,6 +832,8 @@
 
                 //process dialog or window button event, like close, ok and cancel
                 window.closeWindow = function(win_id, win_btn) {
+                    disableModal();
+
                     switch (win_id) {
                         
                         case 'cancel-parcel-delivery-box':
@@ -607,6 +902,10 @@
 
                 //switch tab container
                 window.switchTabContainer = function(switch_tab_id, btn_ref) {
+                    if (forceModal(false)) {
+                        return;
+                    }
+
                     let elem = document.getElementById(switch_tab_id);
                     
                     //exit if is the same tab menu
@@ -638,6 +937,15 @@
                         elem.className = "tab-menu elem-height-50 theme-txt-color-2 txt-clr-hover theme-color-4";
                     }
                 };
+
+                //utility function that allow only one check box be selected
+                window.allowOneCheckBox = function(id, check_boxes_id) {
+                    for (let i = 0; i < check_boxes_id.length; i++) {
+                        document.getElementById(check_boxes_id[i]).checked = false;
+                    }
+
+                    document.getElementById(id).checked = true;
+                };
                 
                 //listen to page resize event
                 window.onresize = function(e) {
@@ -647,11 +955,124 @@
                 //process change delivery form
                 window.processChangeDeliveryForm = function(e) {
                     e.preventDefault();
+
+                    disableModal();
                     
                     //change delivery destination
                     processChangeParcelDeliveryDestination('change-parcel-delivery-destination-win', 'ok');
 
                     //other code here
+                };
+
+                //process parcel quote form for delivery
+                window.processParcelDeliveryQuoteForm = function(e) {
+                    e.preventDefault();
+
+                    //other code here
+
+                    //navigate to pick up and destination address form
+                    let elem = document.getElementById("create-parcel-section-1");
+                    elem.className = "remove-elem";
+                    elem = document.getElementById("create-parcel-section-2");
+                    elem.className = "create-parcel-section-2";
+
+                    //scroll the page to top
+                    window.scrollTo(0, 0);
+                };
+
+                //process pickup and destination address form
+                window.processPickupAndDestinationForm = function(e) {
+                    e.preventDefault();
+
+                    //other code here
+
+                    //navigate to payment page
+                    let elem = document.getElementById("create-parcel-section-2");
+                    elem.className = "remove-elem";
+                    elem = document.getElementById("create-parcel-section-3");
+                    elem.className = "create-parcel-section-3";
+
+                    //scroll the page to top
+                    window.scrollTo(0, 0)
+                };
+
+                //process user payment and place order
+                window.processPaymentForm = function(e) {
+                    e.preventDefault();
+
+                    //other code here
+
+                    //reset the form
+                    resetForm(['parcelquoteform', 'pickupanddestform', 'paymentform']);
+
+                    //set to first panel
+                    resetNavigation("create-parcel-section-1", "create-parcel-section-3");
+
+                    //switch to 'My Order' tab
+                    switchTabContainer('tab-cont-1', document.getElementById("tab-menu-1"));
+
+                    //scroll page to top
+                    window.scrollTo(0, 0);
+                }
+
+                //utility function used to navigate panel(div) to first panel(div)
+                function resetNavigation(panel_id1, panel_id2) {
+                    //hide current panel
+                    document.getElementById(panel_id2).className = "remove-elem";
+
+                    //navigate to first panel
+                    document.getElementById(panel_id1).removeAttribute("class");
+                }
+
+                //cancel create order process, closing the tab by switching 
+                //to 'My Order' tab
+                window.cancelCreateOrder = function(page) {
+                    switch(page) {
+                        case 1:
+                            //reset the form
+                            resetForm(['parcelquoteform']);
+
+                            //switch to 'My Order' tab
+                            switchTabContainer('tab-cont-1', document.getElementById("tab-menu-1"));
+
+                            //scroll page to top
+                            window.scrollTo(0, 0);
+
+                            break;
+
+                        case 2:
+                            //reset the form
+                            resetForm(['parcelquoteform', 'pickupanddestform']);
+
+                            //set to first panel
+                            resetNavigation("create-parcel-section-1", "create-parcel-section-2");
+
+                            //switch to 'My Order' tab
+                            switchTabContainer('tab-cont-1', document.getElementById("tab-menu-1"));
+
+                            //scroll page to top
+                            window.scrollTo(0, 0);
+
+                            break;
+
+                        case 3:
+                            //reset the form
+                            resetForm(['parcelquoteform', 'pickupanddestform', 'paymentform']);
+
+                            //set to first panel
+                            resetNavigation("create-parcel-section-1", "create-parcel-section-3");
+
+                            //switch to 'My Order' tab
+                            switchTabContainer('tab-cont-1', document.getElementById("tab-menu-1"));
+
+                            //scroll page to top
+                            window.scrollTo(0, 0);
+
+                            break;
+
+                        default:
+                            //shouldn't be here
+                    }
                 };
                 
                 //adapt change delivery destination window when page is resized
@@ -831,12 +1252,298 @@
 
                 <!--Create Order-->
                 <div id="tab-cont-2" class="tab-cont remove-elem">
-                    //code here
+                    <div class="create-parcel-wrapper">
+                        <!--upper section-->
+                        <div id="create-parcel-section-1">
+                            <div class="caption-txt-6 theme-txt-color-2 right-align bottom-margin-30">
+                                Courior Quote
+                            </div>
+                            <form name="parcelquoteform" onsubmit="return processParcelDeliveryQuoteForm(event)">
+                                <div class="bottom-margin-25">
+                                    <div class="descr-txt-cont bottom-margin-15">
+                                        If delivery is within the same country/territory tick domestic 
+                                        or otherwise choose international.
+                                    </div>
+                                    <div class="bottom-margin-10">
+                                        <input id="domestic-check-btn" class="custom-check-btn hide-check-btn" type="checkbox" name="domestic" value="1" onclick="allowOneCheckBox(this.id, ['domestic-check-btn', 'int-check-btn'])" checked/>
+                                        <label for="domestic-check-btn">
+                                            <img src="../images/buttons/check-btn-sprite.png" height="20" width="auto">
+                                        </label>
+                                        <span class="theme-txt-color-2">Domestic</span>
+                                    </div>
+                                    <div class="bottom-margin-10">
+                                        <input id="int-check-btn" class="custom-check-btn hide-check-btn" type="checkbox" name="international" value="1" onclick="allowOneCheckBox(this.id, ['domestic-check-btn', 'int-check-btn'])"/>
+                                        <label for="int-check-btn">
+                                            <img src="../images/buttons/check-btn-sprite.png" height="20" width="auto">
+                                        </label>
+                                        <span class="theme-txt-color-2">International</span>
+                                    </div>
+                                </div>
+                                <div class="bottom-margin-25">
+                                    <label class="block label-fmt-b-2 theme-txt-color-2" for="choose-delivery-time">Choose Delivery Day</label>
+                                    <select id="choose-delivery-time" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5">
+                                        <option value="1">Next Day Delivery</option>
+                                        <option value="2">4 Days Delivery</option>
+                                        <option value="3">One Week Delivery</option>
+                                        <option value="4">Two Weeks Delivery</option>
+                                    </select>
+                                </div>
+                                <div class="bottom-margin-25">
+                                    <div class="descr-txt-cont bottom-margin-15">
+                                        Enter the pickup item's dimension and weight bellow
+                                    </div>
+                                    <div class="parcel-dm-input-cont bottom-margin-15">
+                                        <div class="label-fmt-b-2 theme-txt-color-2 bottom-margin-5">
+                                            Parcel Dimension
+                                        </div>
+                                        <div class="parcel-dm-input-wrapper">
+                                            <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 left-right-padding-10" type="number" min="0" name="length" placeholder="Length (CM)"/>
+                                        </div>
+                                        <div class="parcel-dm-input-wrapper">
+                                            <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="number" min="0" name="width" placeholder="Width (CM)"/>
+                                        </div>
+                                        <div class="parcel-dm-input-wrapper">
+                                            <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="number" min="0" name="height" placeholder="Height (CM)"/>
+                                        </div>
+                                    </div>
+                                    <div class="parcel-weight-input-cont">
+                                        <label class="label-fmt-b-2 theme-txt-color-2" for="weight">Weight:</label>
+                                        <input id="weight" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="number" min="0" name="weight" placeholder="Kg"/>
+                                    </div>
+                                </div>
+
+                                <!--footer container-->
+                                <div class="create-parcel-nav-cont">
+                                    <button type="button" onclick="cancelCreateOrder(1)" class="button cancel-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1">Cancel</button>
+                                    <button type="submit" class="button next-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="create-parcel-section-2" class="remove-elem">
+                            <div class="caption-txt-6 theme-txt-color-2 right-align bottom-margin-30">
+                                Delivery Address
+                            </div>
+                            <form name="pickupanddestform" onsubmit="return processPickupAndDestinationForm(event)">
+                                <div class="parcel-addr-cont">
+                                    <!--pick up address section-->
+                                    <div class="pua-section">
+                                        <div class="pickup-addr-input-wrapper">
+                                            <div class="caption-pua-cont caption-txt-4 theme-txt-color-2 theme-color-4">
+                                                Pick Up Address
+                                            </div>
+                                            <div class="pickup-addr-input-in-wrapper rounded-corner-4">
+                                                <div class="bottom-margin-10">
+                                                    <label for="full-name1" class="label-fmt-b-2 theme-txt-color-2">Full Name</label>
+                                                    <input id="full-name1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="fullname1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="company1" class="label-fmt-b-2 theme-txt-color-2">Company/Business</label>
+                                                    <input id="company1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="company1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="street-id11" class="label-fmt-b-2 theme-txt-color-2">Street Address 1</label>
+                                                    <input id="street-id11" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="address11" placeholder="Address Line 1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="street-id21" class="label-fmt-b-2 theme-txt-color-2">Street Address 2</label>
+                                                    <input id="street-id21" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="address21" placeholder="Address Line 2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="country1" class="label-fmt-b-2 theme-txt-color-2">Country/Territory</label>
+                                                    <select id="country1" class="input-in-padding elem-height-35 theme-txt-color-2 rounded-corner-4" name="country1">
+                                                        <option value="Kenya">Kenya</option>
+                                                        <option value="Liberia">Liberia</option>
+                                                        <option value="Namibia">Namibia</option>
+                                                        <option value="Niger">Niger</option>
+                                                        <option value="Nigeria">Nigeria</option>
+                                                        <option value="Ghana">Ghana</option>
+                                                        <option value="Cameron">Cameron</option>
+                                                        <option value="United State of America">U.S.A</option>
+                                                        <option value="China">China</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="city1" class="label-fmt-b-2 theme-txt-color-2">City/Town</label>
+                                                    <input id="city1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="city1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <div class="form-input-state-cont">
+                                                        <label for="state1" class="label-fmt-b-2 theme-txt-color-2">State/Province</label>
+                                                        <input id="state1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="state1"/>
+                                                    </div>
+                                                    <div class="form-input-zip-cont">
+                                                        <label for="zip1" class="label-fmt-b-2 theme-txt-color-2">Zip/Postal code</label>
+                                                        <input id="zip1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="zip1"/>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="email1" class="label-fmt-b-2 theme-txt-color-2">Email</label>
+                                                    <input id="email1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="email1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="phone-area-code1" class="block label-fmt-b-2 theme-txt-color-2 bottom-margin-5">Phone</label>
+                                                    <div class="form-input-area-cont">
+                                                        <input id="phone-area-code1" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="phoneareacode1" placeholder="Area Code"/>
+                                                    </div>
+                                                    <div class="form-input-phone-cont">
+                                                        <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="phone1" placeholder="Phone Number"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--delivery address section-->
+                                    <div class="da-section">
+                                        <div class="delivery-addr-input-wrapper">
+                                            <div class="caption-da-cont caption-txt-4 theme-txt-color-2 theme-color-4">
+                                                Delivery Address
+                                            </div>
+                                            <div class="delivery-addr-input-in-wrapper rounded-corner-4">
+                                                <div class="bottom-margin-10">
+                                                    <label for="full-name2" class="label-fmt-b-2 theme-txt-color-2">Full Name</label>
+                                                    <input id="full-name2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="fullname2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="company2" class="label-fmt-b-2 theme-txt-color-2">Company/Business</label>
+                                                    <input id="company2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="company2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="street-id12" class="label-fmt-b-2 theme-txt-color-2">Street Address 1</label>
+                                                    <input id="street-id12" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="address12" placeholder="Address Line 1"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="street-id22" class="label-fmt-b-2 theme-txt-color-2">Street Address 2</label>
+                                                    <input id="street-id22" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="address22" placeholder="Address Line 2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="country2" class="label-fmt-b-2 theme-txt-color-2">Country/Territory</label>
+                                                    <select id="country2" class="input-in-padding elem-height-35 theme-txt-color-2 rounded-corner-4" name="country2">
+                                                        <option value="Kenya">Kenya</option>
+                                                        <option value="Liberia">Liberia</option>
+                                                        <option value="Namibia">Namibia</option>
+                                                        <option value="Niger">Niger</option>
+                                                        <option value="Nigeria">Nigeria</option>
+                                                        <option value="Ghana">Ghana</option>
+                                                        <option value="Cameron">Cameron</option>
+                                                        <option value="United State of America">U.S.A</option>
+                                                        <option value="China">China</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="city2" class="label-fmt-b-2 theme-txt-color-2">City/Town</label>
+                                                    <input id="city2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="city2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <div class="form-input-state-cont">
+                                                        <label for="state2" class="label-fmt-b-2 theme-txt-color-2">State/Province</label>
+                                                        <input id="state2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="state2"/>
+                                                    </div>
+                                                    <div class="form-input-zip-cont">
+                                                        <label for="zip2" class="label-fmt-b-2 theme-txt-color-2">Zip/Postal code</label>
+                                                        <input id="zip2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="zip2"/>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="email2" class="label-fmt-b-2 theme-txt-color-2">Email</label>
+                                                    <input id="email2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="email2"/>
+                                                </div>
+                                                <div class="bottom-margin-10">
+                                                    <label for="phone-area-code2" class="block label-fmt-b-2 theme-txt-color-2 bottom-margin-5">Phone</label>
+                                                    <div class="form-input-area-cont">
+                                                        <input id="phone-area-code2" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="phoneareacode2" placeholder="Area Code"/>
+                                                    </div>
+                                                    <div class="form-input-phone-cont">
+                                                        <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="phone2" placeholder="Phone Number"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--footer container-->
+                                <div class="create-parcel-nav-cont">
+                                    <button type="button" onclick="cancelCreateOrder(2)" class="button cancel-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1">Cancel</button>
+                                    <button type="submit" class="button next-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="create-parcel-section-3" class="remove-elem">
+                            <div class="caption-txt-6 theme-txt-color-2 right-align bottom-margin-30">
+                                Payment
+                            </div>
+                            <form name="paymentform" onsubmit="return processPaymentForm(event)">
+                                <div class="order-summary-cont">
+                                    <table class="parcel-order-summary-tbl tbl-single-bolder-color elem-shadow">
+                                        <tr>
+                                            <th class="caption-txt-3 theme-color-1 theme-txt-color-1" colspan="2">
+                                                Order Summary
+                                            </th>
+                                        </tr>
+                                        <tr class="label-fmt-3">
+                                            <td class="theme-txt-color-2">Parcel ID</td>
+                                            <td class="right-align">75392643</td>
+                                        </tr>
+                                        <tr class="label-fmt-3">
+                                            <td class="theme-txt-color-2">Delivery</td>
+                                            <td class="right-align">N12500</td>
+                                        </tr>
+                                        <tr class="label-fmt-3">
+                                            <td class="theme-txt-color-2">Return</td>
+                                            <td class="right-align">N2600</td>
+                                        </tr>
+                                        <tr class="label-fmt-b-3 tbl-top-b-border-color">
+                                            <td class="theme-txt-color-2">Total</td>
+                                            <td class="right-align">N15100</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="parcel-order-payment-cont top-margin-60">
+                                    <div class="caption caption-txt-4 theme-txt-color-2 theme-color-4">
+                                        Your payment card details
+                                    </div>
+                                    <div class="container rounded-corner-4">
+                                    <div class="bottom-margin-15">
+                                        <label for="card-number" class="label-fmt-b-2 theme-txt-color-2">Card number</label>
+                                        <div class="parcel-payment-input-icon-cont">
+                                            <span class="fas fa-credit-card theme-txt-color-2"></span>
+                                        </div>
+                                        <input id="card-number" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="cardnumber"/>
+                                    </div>
+                                    <div class="bottom-margin-15">
+                                       <label for="name-on-card" class="label-fmt-b-2 theme-txt-color-2">Name on card</label>
+                                       <input id="name-on-card" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="nameoncard"/>
+                                    </div>
+                                    <div class="wrapper bottom-margin-15">
+                                        <div class="expir-date-wrapper">
+                                            <label for="expiration-date-month" class="inline-block bottom-margin-5 label-fmt-b-2 theme-txt-color-2">Expiration date</label>
+                                            <div class="month">
+                                                <input id="expiration-date-month" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="expirationdatemonth" placeholder="MM"/>
+                                            </div>
+                                            <div class="year">
+                                                <input class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2" type="text" name="expirationdateyear" placeholder="YYYY"/>
+                                            </div>
+                                        </div>
+                                        <div class="security-code-wrapper">
+                                            <label for="security-code" class="label-fmt-b-2 theme-txt-color-2">Security code</label>
+                                            <input id="security-code" class="input-in-padding elem-height-35 rounded-corner-4 theme-txt-color-2 top-margin-5" type="text" name="securitycode"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="top-margin-30">
+                                    <button class="place-order-btn button cancel-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1" type="submit">Place Order</button>
+                                    <button type="button" onclick="cancelCreateOrder(3)" class="button place-order-cancel-btn elem-height-35 theme-color-3 clr-hover rounded-corner-4 theme-txt-color-1">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!--section below contain all the dialog boxes and windows-->
+        <!--section below contains all the dialog boxes and windows-->
 
         <!--cancel parcel delivery box-->
         <div id="cancel-parcel-delivery-box" class="theme-color-4 elem-shadow remove-elem">
