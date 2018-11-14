@@ -495,6 +495,10 @@
                 window.processSignInForm = function(e) {
                     e.preventDefault();
 
+                    //redirect user to account page.
+                    //this is for testing, your free to remove this
+                    window.location.replace('./user/index.html');
+
                     //your code here
                 }
             }
@@ -537,7 +541,7 @@
         <div id="dropdown-main-menu-cont" class="remove-elem">
             <nav class="top-bottom-padding-20">
                 <ul class="vt-bar-menu vt-bar-menu-fm-1">
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="./user/index.html">Sign Up</a></li>
                     <li><a href="#">One</a></li>
                     <li><a href="#">Two</a></li>
                     <li><a href="#">Three</a></li>
