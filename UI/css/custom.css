@@ -206,6 +206,22 @@ body {
     margin-bottom: 15px;
 }
 
+.bottom-margin-20 {
+    margin-bottom: 20px;
+}
+
+.bottom-margin-25 {
+    margin-bottom: 25px;
+}
+
+.bottom-margin-30 {
+    margin-bottom: 30px;
+}
+
+.bottom-margin-35 {
+    margin-bottom: 35px;
+}
+
 .table-wrapper {
     margin-left: 10px;
     margin-right: 10px;
@@ -259,6 +275,24 @@ body {
 .caption-txt-3 {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.caption-txt-4 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.caption-txt-5 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.caption-txt-6 {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -395,7 +429,15 @@ body {
     color: white;
 }
 
-.nav-dpl-table {
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.table {
     display: table;
 }
 
@@ -408,6 +450,7 @@ body {
 }
 
 input[type=text],
+input[type=number], 
 input[type=password],
 select {
     width: 100%;
