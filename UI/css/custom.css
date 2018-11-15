@@ -375,6 +375,61 @@ body {
     border-radius: 6px;
 }
 
+table, th, td {
+    border-collapse: collapse;
+}
+
+th {
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    padding: 8px 10px;
+    text-align: left;
+}
+
+table.tbl-single-bolder-color-1 {
+    border: 1px solid gray;
+}
+
+table.tbl-single-bolder-color-2 {
+    border: 1px solid #5787c2;
+}
+
+.tbl-top-b-border-color {
+    border-top: 2px solid #5787c2;
+}
+
+.tbl-top-b-border-color th {
+    border-top: 2px solid #5787c2;
+}
+
+.tbl-top-b-border-color td {
+    border-top: 2px solid #5787c2;
+}
+
+.tbl-top-b-border-color tr {
+    border-top: 2px solid #5787c2;
+}
+
+table.tbl-border-color {
+    border: 1px solid #5787c2;
+}
+
+table.tbl-border-color th {
+    border: 1px solid #5787c2;
+}
+
+table.tbl-border-color td {
+    border: 1px solid #5787c2;
+}
+
+table.tbl-hd-txt-fmt th {
+    font-size: 1.0em;
+    font-weight: normal;
+}
+
 .input-help-msg-panel-cont {
     position: absolute;
     right: 0px;
@@ -482,6 +537,34 @@ select {
     vertical-align: middle;
     text-align: center;
     font-size: 1.5em;
+}
+
+input[type=checkbox].hide-check-btn {
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+input[type=checkbox].custom-check-btn + label {
+    display: inline-block;
+    position: relative;
+    bottom: -3px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+input[type=checkbox].custom-check-btn + label > img {
+    height: 20px;
+    width: auto;
+}
+
+input[type=checkbox].custom-check-btn:checked + label > img {
+    position: relative;
+    left: -30px;
 }
 
 .login-icon-fmt {

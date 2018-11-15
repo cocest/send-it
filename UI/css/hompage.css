@@ -1,0 +1,237 @@
+/*css for index.html*/
+
+#main-menu-signup-link {
+    padding: 5px 15px;
+}
+
+#dropdown-main-menu-cont {
+    position: fixed;
+    width: 100%;
+    padding-top: 50px;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: white;
+    z-index: 300;
+}
+
+#dropdown-main-menu-cont.hide {
+    display: none;
+}
+
+#dropdown-main-menu-cont.show {
+    display: block;
+}
+
+#headline-sec-cont {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+#bg-img-cont {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    z-index: 50;
+}
+
+#headline-cont {
+    position: absolute;
+    left: 0px;
+    height: inherit;
+    max-width: 700px;
+    margin-left: 80px;
+    z-index: 100;
+}
+
+#bg-img-cont .bg-img {
+    background-image: url(../images/bg/bg_img2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: inherit;
+    background-color: lightyellow;
+}
+
+.headline {
+    display: inline-block;
+    max-width: 560px;
+    margin-top: 180px;
+    padding: 10px;
+    font-size: 2.5em;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.sub-headline {
+    display: inline-block;
+    max-width: 470px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.call-to-action-cont {
+    margin-top: 50px;
+}
+
+.open-account-btn {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    width: 190px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    font-family: sans-serif;
+    font-size: 1.0em;
+    color: white;
+    cursor: pointer;
+}
+
+.open-account-btn:hover {
+    outline: 1px solid white;
+}
+
+.lower-sec-cont {
+    padding-bottom: 50px;
+}
+
+.caption-header-cont {
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.caption-header-cont .header-text {
+    font-size: 2.0em;
+}
+
+.caption-header-cont .sub-header-text {
+    display: inline-block;
+    max-width: 400px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.more-about-sendit-cont {
+    margin: 40px 10px 0px 10px;
+}
+
+.header-menu .menu-login-cont {
+    display: table-cell;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.header-menu .menu-login-cont .wrapper {
+    display: inline-block;
+    width: 100px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#signin-panel-cont {
+    position: absolute;
+    top: 68px;
+    right: 0px;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: -3px 10px 10px 0px rgba(0,0,0,0.3);
+    z-index: 500;
+}
+
+#signin-panel-cont .wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.input-cont {
+    margin-bottom: 25px;
+}
+
+.forgot-pass-cont {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.forgot-pass-link {
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.sigin-btn-size {
+    width: 100%;
+    height: 40px;
+}
+
+.forgot-pass-link:hover {
+    text-decoration: underline;
+}
+
+.remember-me-txt {
+    margin-left: 5px;
+    font-size: 1.0em;
+    font-weight: 500;
+}
+
+#show-pass-btn > span {
+    font-size: 1.2em!important;
+}
+
+#show-pass-btn.show > span {
+    color: #77a6e1;
+}
+
+#show-pass-btn.hide > span {
+    color: gray;
+}
+
+@media only screen and (max-width: 450px) {
+    #signin-panel-cont {
+        max-width: none!important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header-menu .menu-login-cont .wrapper {
+        padding-right: 0px!important;
+    }
+
+    #signin-panel-cont {
+        margin-top: -21px;
+    }
+
+    #headline-sec-cont {
+        text-align: center!important;
+    }
+
+    #headline-cont {
+        margin-left: 10px!important;
+        margin-right: 10px!important;
+    }
+
+    .headline {
+        margin-top: 120px!important;
+    }
+
+    .more-about-sendit-cont {
+        text-align: center!important;
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+}
