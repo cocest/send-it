@@ -1,0 +1,161 @@
+
+/*css for register/index.html*/
+
+body {
+    padding-top: 70px;
+}
+
+hr {
+    border-color: lightgray;
+    border-width: 0.5px;
+}
+
+.header-menu {
+    display: table;
+}
+
+.menu-login-link-cont {
+    display: table-cell;
+    min-width: 105px;
+    width: 130px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.menu-login-link-cont > a {
+    text-decoration: none;
+}
+
+.content-cont {
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.reg-form-cont {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.form-group-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.reg-input-cont {
+    display: table;
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.reg-input-cont > label {
+    display: table-cell;
+    width: 200px;
+    text-align: right;
+    padding-right: 40px;
+    vertical-align: middle;
+}
+
+.reg-input-cont > input {
+    display: table-cell;
+}
+
+.reg-fullname-cont,
+.reg-phone {
+    display: table-cell;
+    text-align: right;
+    overflow: hidden;
+}
+
+.reg-fullname-cont #user-title {
+    width: 20%;
+    float: right;
+}
+
+.reg-fullname-cont #first-name {
+    width: 39%;
+    float: right;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+.reg-fullname-cont #last-name {
+    width: 38%;
+    float: right;
+}
+
+.reg-phone #phone-area-code {
+    width: 28%;
+    float: right;
+    margin-right: 1.5%;
+}
+
+.reg-phone #phone {
+    width: 70%;
+    float: right;
+}
+
+#pass-match-cont.hide span {
+    display: none!important;
+}
+
+.header-instr-text {
+    margin: 35px 10px 15px 10px;
+}
+
+.register-btn-cont {
+    text-align: right;
+    margin: 0px 10px 120px 10px;
+}
+
+.register-btn-size {
+    width: 150px;
+    height: 40px;
+}
+
+.login-icon-fmt {
+    font-size: 1.5em;
+}
+
+.login-txt-fmt {
+    bottom: 0;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .content-cont {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .reg-input-cont {
+        display: block!important;
+        margin-top: 20px!important;
+    }
+
+    .reg-input-cont > label {
+        display: block!important;
+        text-align: left!important;
+        margin-bottom: 10px;
+    }
+
+    .reg-fullname-cont, 
+    .reg-phone {
+        display: table-cell!important;
+    }
+
+    .register-btn-cont {
+        text-align: center!important;
+    }
+}
