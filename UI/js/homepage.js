@@ -18,6 +18,12 @@ function init() {
 
     //listen on page resize event
     window.onresize = function(e) {
+        //adapt page user interface
+        adaptPageUI();
+    };
+
+    //adapt page user interface
+    function adaptPageUI() {
         //login panel
         if (is_login_panel_open && window.innerWidth >= 800) {
             //enable page scrolling
@@ -34,7 +40,7 @@ function init() {
         if (is_drop_down_menu_active && window.innerWidth >= 800) {
             dropMainMenu();
         }
-    };
+    }
 
     //show or hide mobile main menu
     window.dropMainMenu = function(e) {
@@ -221,6 +227,15 @@ function init() {
 
         //your code here
     }
+
+    //adapt page user interface
+    adaptPageUI();
+
+    //change the menu bar
+    changeMainMenuOnScroll();
+
+    //position login panel relative to main header menu
+    fixedLoginPanel();
 }
 
 //initialise the script

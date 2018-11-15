@@ -170,6 +170,9 @@ function init() {
 
         //your code here
     };
+
+    //change the menu bar
+    changeMainMenuOnScroll();
 }
 
 //initialise the script
