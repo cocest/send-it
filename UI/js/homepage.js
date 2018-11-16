@@ -228,6 +228,20 @@ function init() {
         //your code here
     }
 
+    //this function launch login panel
+    function autoLaunchLoginPanel() {
+        let cookie = getCookie("launch_login_panel");
+
+        //check to auto launch login panel
+        if (cookie == "launch") {
+            //launch the panel
+            launchLoginPanel();
+
+            //set launch login panel to no launch
+            setCookie("launch_login_panel", "no_launch");
+        }
+    }
+
     //adapt page user interface
     adaptPageUI();
 
@@ -236,6 +250,10 @@ function init() {
 
     //position login panel relative to main header menu
     fixedLoginPanel();
+
+    //launch login panel
+    //Note: place at end of the script
+    autoLaunchLoginPanel();
 }
 
 //initialise the script

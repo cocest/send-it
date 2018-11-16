@@ -166,9 +166,18 @@ function init() {
 
         //redirect user to account page.
         //this is for testing, your free to remove this
-        window.location.replace('../user/index.html');
+        window.location.replace('../user/parcel_delivery.html');
 
         //your code here
+    };
+
+    //direct user to home page and launch the login panel
+    window.homepageAndLaunchLoginPanel = function() {
+        //set launch login panel
+        setCookie("launch_login_panel", "launch", 30);
+
+        //redirect user to homepage or landing page
+        window.location.replace('../index.html');
     };
 
     //change the menu bar

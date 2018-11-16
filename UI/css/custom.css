@@ -114,6 +114,14 @@ body {
     color: #b2dbfc;
 }
 
+.theme-txt-color-7 {
+    color: #009688;
+}
+
+.theme-txt-color-8 {
+    color: chocolate;
+}
+
 /****UI Text color end****/
 
 /********UI Button********/
@@ -192,6 +200,14 @@ body {
 
 .top-margin-60 {
     margin-top: 60px;
+}
+
+.top-margin-100 {
+    margin-top: 100px;
+}
+
+.top-margin-130 {
+    margin-top: 130px;
 }
 
 .bottom-margin-5 {
@@ -327,6 +343,7 @@ body {
 .label-fmt-1 {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.0em;
+    font-weight: normal;
 }
 
 .label-fmt-b-2 {
@@ -338,6 +355,7 @@ body {
 .label-fmt-2 {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.1em;
+    font-weight: normal;
 }
 
 .label-fmt-b-3 {
@@ -349,6 +367,7 @@ body {
 .label-fmt-3 {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2em;
+    font-weight: normal;
 }
 
 .hd-menu-height-50 {
