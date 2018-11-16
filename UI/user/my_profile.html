@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SendIT - Account</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="UI Template" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Cocest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/icons/favicon1.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../images/icons/favicon2.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/icons/favicon3.png" sizes="120x120">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/user_page.css">
+    <script src="../js/utils.js" type="text/javascript"></script>
+    <script src="../js/my_profile_page.js" type="text/javascript"></script>
+</head>
+
+<body class="center-elem elem-shadow">
+    <!--Header menu bar-->
+    <div class="header-menu hd-menu-height-70 theme-color-1">
+        <div class="site-log-cont">
+            <a href="../index.html"><img class="site" src="../images/logo/img1.png" alt="SendIT Logo" /></a>
+        </div>
+        <div class="menu-logout-cont">
+            <a href="../index.html">
+                <ul class="hr-bar-menu">
+                    <li>
+                        <span class="fas fa-user-circle login-icon-fmt theme-txt-color-1"></span>
+                    </li>
+                    <li>
+                        <span class="login-txt-fmt theme-txt-color-1">Logout</span>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </div>
+
+    <!--side menu container-->
+    <div id="side-menu-cont" class="theme-color-2">
+        <div class="wrapper">
+            <ul class="vt-bar-menu list-fmt link-fmt">
+                <li>
+                    <a class="elem-height-40 theme-txt-color-6 txt-clr-hover" href="parcel_delivery.html">Parcel
+                        Delivery</a>
+                </li>
+                <li class="rounded-corner-4 theme-color-9 clr-hover">
+                    <a class="elem-height-40 theme-txt-color-1" href="my_profile.html">My Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--page content container-->
+    <div id="page-content-cont">
+        <div class="my-profile-content-wrapper">
+            <!--parcel order statistics-->
+            <div class="parcel-stat-table-cont top-margin-30">
+                <table id="parcel-order-tbl" class="tbl-border-color">
+                    <tr>
+                        <th class="theme-color-1 label-fmt-2 theme-txt-color-1" colspan="2">Delivery Statistics</th>
+                    </tr>
+                    <tr class="label-fmt-2 theme-txt-color-2">
+                        <td class="">Parcel Delivered</td>
+                        <td class="tbl-col-w-100 right-align">17</td>
+                    </tr>
+                    <tr class="label-fmt-2 theme-txt-color-2">
+                        <td class="">Parcel Intransit</td>
+                        <td class="right-align">3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--parcel order table-->
+            <div class="table-wrapper top-margin-100 bottom-margin-35">
+                <table class="tbl-hd-txt-fmt tbl-min-w tbl-border-color">
+                    <tr>
+                        <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
+                            Parcel ID
+                        </th>
+                        <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">
+                            Pickup Location
+                        </th>
+                        <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">
+                            Destination
+                        </th>
+                        <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
+                            Price
+                        </th>
+                        <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
+                            Status
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            13252374
+                        </td>
+                        <td>
+                            yuju ygu uyuh uyun jcuin iugvk
+                        </td>
+                        <td>
+                            ynk hxb ki hgyiu uyj jucghj
+                        </td>
+                        <td>
+                            N6700
+                        </td>
+                        <td class="label-fmt-b-2 theme-txt-color-8 center-align">
+                            Intransit
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13252374
+                        </td>
+                        <td>
+                            yuju ygu uyuh uyun jcuin
+                        </td>
+                        <td>
+                            ynk hxb ki hgyiu uyj jucghj
+                        </td>
+                        <td>
+                            N1050
+                        </td>
+                        <td class="label-fmt-b-2 theme-txt-color-7 center-align">
+                            Deliverd
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13252374
+                        </td>
+                        <td>
+                            yuju ygu uyuh uyun jcuin
+                        </td>
+                        <td>
+                            ynk hxb ki hgyiu uyj jucghj
+                        </td>
+                        <td>
+                            N2500
+                        </td>
+                        <td class="label-fmt-b-2 theme-txt-color-7 center-align">
+                            Deliverd
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--list navigation bar cont-->
+            <div class="mp-list-nav-bar-cont size-elem rounded-corner-4">
+                <div class="wrapper-1">
+                    <select id="parcel-list-category" class="filter-by-category input-fmt rounded-corner-4 elem-height-30">
+                        <option value="0">All</option>
+                        <option value="1">Deliverd</option>
+                        <option value="1">Intransit</option>
+                    </select>
+                </div>
+                <div class="wrapper-3">
+                    <ul class="hr-bar-menu">
+                        <li>
+                            <button class="goto-btn button elem-height-30 elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="prevParcelOrderList()">Prev</button>
+                        </li>
+                        <li>
+                            <input id="goto-parcel-order" class="elem-height-30 rounded-corner-4" type="text" value="1">
+                            <label for="goto-parcel-order">of 5</label>
+                        </li>
+                        <li>
+                            <button class="goto-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="nextParcelOrderList()">Next</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper-2">
+                    <ul class="hr-bar-menu">
+                        <li>
+                            <input class="search-input input-fmt elem-height-30 rounded-corner-4" type="text" placeholder="Parcel ID">
+                        </li>
+                        <li>
+                            <button class="search-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1" onclick="searchParcelOrderLIst()">Search</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

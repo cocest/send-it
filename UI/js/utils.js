@@ -4,6 +4,28 @@
     //constant and variables
     let window_is_opened = false;
 
+    //utility function for setting cookies
+    window.setCookie = function(cookie_name, cookie_value, exdays = 1) {
+        let date = new Date();
+        date.setTime(date.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires=" + date.toUTCString();
+        document.cookie = cookie_name + "=" + cookie_value + "; " + expires;
+    };
+
+    //utility function for getting cookies
+    window.getCookie = function(cookie_name) {
+        let name = cookie_name + "=";
+        let ca = document.cookie.split(';');
+        let i = 0;
+        for(; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0 )=== ' ') c = c.substring(1);
+            if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+        }
+
+        return "";
+    }
+
     //this function prevent any action that launch 
     //windowm or panel when used
     window.forceModal = function(enable = true) {

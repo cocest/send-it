@@ -78,14 +78,29 @@ ul.vt-bar-menu.link-fmt a {
 
 table {
     width: 100%;
+}
+
+table.tbl-min-w {
     min-width: 700px;
 }
 
-table th.tbl-col-w-80 {
+table th.tbl-col-w-60,
+table td.tbl-col-w-60 {
+    width: 60px;
+}
+
+table th.tbl-col-w-80,
+table td.tbl-col-w-80 {
     width: 80px;
 }
 
-table th.tbl-col-w-100 {
+table th.tbl-col-w-100,
+table td.tbl-col-w-100 {
+    width: 100px;
+}
+
+table th.tbl-col-w-120,
+table td.tbl-col-w-120 {
     width: 100px;
 }
 
@@ -450,4 +465,66 @@ table th.tbl-col-w-100 {
     vertical-align: middle;
     text-align: center;
     font-size: 1.5em;
+}
+
+.parcel-stat-table-cont {
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+    margin-left: 10px;
+}
+
+.mp-list-nav-bar-cont {
+    display: table;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    min-width: 645px;
+    border: 1px solid #bfcee0;
+}
+
+.mp-list-nav-bar-cont .wrapper-1 {
+    float: left;
+    margin-left: 10px;
+}
+
+.mp-list-nav-bar-cont .wrapper-2 {
+    float: right;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.mp-list-nav-bar-cont .wrapper-3 {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mp-list-nav-bar-cont .filter-by-category {
+    width: 180px;
+}
+
+.mp-list-nav-bar-cont .search-input {
+    width: 110px;
+    font-size: 0.95em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mp-list-nav-bar-cont .search-btn {
+    font-size: 0.95em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mp-list-nav-bar-cont #goto-parcel-order {
+    width: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mp-list-nav-bar-cont .goto-btn {
+    font-size: 0.95em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
