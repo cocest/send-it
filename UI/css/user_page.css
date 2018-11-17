@@ -84,6 +84,21 @@ table.tbl-min-w {
     min-width: 700px;
 }
 
+table th.tbl-col-w-15,
+table td.tbl-col-w-15 {
+    width: 20px;
+}
+
+table th.tbl-col-w-20,
+table td.tbl-col-w-20 {
+    width: 20px;
+}
+
+table th.tbl-col-w-30,
+table td.tbl-col-w-30 {
+    width: 30px;
+}
+
 table th.tbl-col-w-60,
 table td.tbl-col-w-60 {
     width: 60px;
@@ -101,7 +116,7 @@ table td.tbl-col-w-100 {
 
 table th.tbl-col-w-120,
 table td.tbl-col-w-120 {
-    width: 100px;
+    width: 120px;
 }
 
 .list-nav-bar-cont {

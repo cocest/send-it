@@ -1,0 +1,28 @@
+/* css for admin page */
+
+.page-content-cont {
+    padding: 80px 10px 10px 10px;
+    height: 1000px;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.change-state-btn {
+    font-size: 0.85em;
+    width: 100px;
+}
+
+.save-parcel-order-btn-cont {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.order-location-editor {
+    word-wrap: break-word;
+}
+
+table td.metain-col-w-ratio {
+    max-width: 10px; /*it can be any number*/
+}

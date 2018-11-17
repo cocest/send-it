@@ -74,6 +74,14 @@ body {
     background-color: #168b82;
 }
 
+.theme-color-12 {
+    background-color: chocolate
+}
+
+.theme-color-12.clr-hover:hover {
+    background-color: rgb(189, 87, 14);
+}
+
 /****UI color end****/
 
 /****UI Text color****/
@@ -252,6 +260,8 @@ body {
 .combo-box-menu {
     position: absolute;
     right: 20px;
+    max-width: 180px;
+    min-width: 150px;
     margin-top: 2px;
     border: 1px solid lightgray;
 }
@@ -392,6 +402,14 @@ body {
 
 .rounded-corner-6 {
     border-radius: 6px;
+}
+
+.left-border-none {
+    border-left: none!important;
+}
+
+.right-border-none {
+    border-right: none!important;
 }
 
 table, th, td {
