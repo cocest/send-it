@@ -2,7 +2,7 @@
 
 .page-content-cont {
     padding: 80px 10px 10px 10px;
-    height: 1000px;
+    overflow: hidden;
 }
 
 .admin-table-wrapper {
