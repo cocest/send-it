@@ -49,7 +49,7 @@
 
         <!--parcel order table-->
         <div class="admin-table-wrapper top-margin-100 bottom-margin-35">
-            <table class="tbl-hd-txt-fmt tbl-min-w tbl-border-color" style="width: 100%;">
+            <table class="tbl-hd-txt-fmt tbl-min-w max-w-2 tbl-border-color">
                 <tr>
                     <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
                         Parcel ID
@@ -92,7 +92,7 @@
                         N6700
                     </td>
                     <td class="label-fmt-2 theme-txt-color-8 center-align">
-                        <button onclick="comboBoxMenu('cbm1')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-12 clr-hover">
+                        <button onclick="comboBoxMenu(this, 'cbm1')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-12 clr-hover">
                             <span id="change_status_13252374">Intransit</span>
                             <span class="fas fa-caret-down"></span>
                         </button>
@@ -135,7 +135,7 @@
                         N1050
                     </td>
                     <td class="label-fmt-2 theme-txt-color-7 center-align">
-                        <button onclick="comboBoxMenu('cbm2')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
+                        <button onclick="comboBoxMenu(this, 'cbm2')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
                             <span id="change_status_67098798">Delivered</span>
                             <span class="fas fa-caret-down"></span>
                         </button>
@@ -178,7 +178,7 @@
                         N2500
                     </td>
                     <td class="label-fmt-2 theme-txt-color-7 center-align">
-                        <button onclick="comboBoxMenu('cbm3')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
+                        <button onclick="comboBoxMenu(this, 'cbm3')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
                             <span id="change_status_58698542">Delivered</span>
                             <span class="fas fa-caret-down"></span>
                         </button>
@@ -202,13 +202,13 @@
         </div>
 
         <!--list navigation bar cont-->
-        <div class="mp-list-nav-bar-cont size-elem rounded-corner-4">
+        <div class="mp-list-nav-bar-cont max-w-2 size-elem rounded-corner-4">
             <div class="wrapper-1">
                 <select id="parcel-list-category" class="filter-by-category input-fmt rounded-corner-4 elem-height-30">
                     <option value="0">All</option>
                     <option value="1">Intransit</option>
-                    <option value="1">Delivered</option>
-                    <option value="1">Canceld Order</option>
+                    <option value="2">Delivered</option>
+                    <option value="3">Cancelled Order</option>
                 </select>
             </div>
             <div class="wrapper-3">

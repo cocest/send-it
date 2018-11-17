@@ -12,12 +12,12 @@ function init() {
 
                 break;
 
-            case 'intransit':
+            case 'delivered':
                 //code here
 
                 break;
 
-            case 'intransit':
+            case 'cancel':
                 //code here
 
                 break;
@@ -55,7 +55,7 @@ function init() {
         }
     };
 
-    window.comboBoxMenu = function (menu_id) {
+    window.comboBoxMenu = function (combo_box_launch_btn, menu_id) {
         if (forceModal(false)) {
             return;
         }
@@ -72,6 +72,11 @@ function init() {
         if (elem.getAttribute("state") == "0") { //show menu
             elem.setAttribute("state", "1");
             elem.className = "combo-box-menu theme-color-4 elem-shadow";
+
+            //position menu
+            let menu_pos = getComboBoxPos(combo_box_launch_btn, elem);
+            elem.setAttribute("style", "top: " + menu_pos.y + "px; " + "left: " + menu_pos.x + "px;");
+
             combo_box_active_menu_handler = elem;
 
         } else { //close menu
@@ -82,6 +87,16 @@ function init() {
         combo_box_menu_sync = 1;
     };
 
+    //calculate comboBox position
+    function getComboBoxPos(relative_elem, combo_box) {
+        let lb = relative_elem.getBoundingClientRect();
+        let shift_w = combo_box.offsetWidth - lb.width
+        let c_x = lb.x - shift_w;
+        let c_y = lb.y + lb.height + 1;
+
+        return {x: c_x, y: c_y};
+    }
+
     //close menu opened by another combo box menu
     function closeComboBoxActiveMneu() {
         if (combo_box_active_menu_handler !== null) {
@@ -90,6 +105,29 @@ function init() {
             combo_box_active_menu_handler = null;
         }
     }
+
+    //adapt page UI height
+    function adaptPageHeightUI() {
+        let elem = document.querySelector(".page-content-cont"); //get page container
+        let pc_h = elem.offsetHeight;
+        let w_h = window.innerHeight;
+
+        //check to set page height to window height
+        if (pc_h < w_h) {
+            //set page height to window height
+            document.body.setAttribute("style", "height: " + (w_h - 2) + "px;");
+        } else {
+            document.body.removeAttribute("style");
+        }
+    }
+
+    //listen to window resized
+    window.onresize = function(e) {
+        adaptPageHeightUI()
+    };
+
+    //adapt page UI height
+    adaptPageHeightUI();
 }
 
 //initialise the script
