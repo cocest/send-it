@@ -48,6 +48,11 @@
         return document.body.scrollTop || document.documentElement.scrollTop;
     };
 
+    //get page scroll left position
+    window.getPageScrollLeft = function() {
+        return document.body.scrollLeft || document.documentElement.scrollLeft;
+    };
+
     //utility function to calculate number of pages base on view count
     window.getPageCount = function(view_count, count) {
         if (view_count >= count) {

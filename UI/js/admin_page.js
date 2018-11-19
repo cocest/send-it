@@ -74,7 +74,7 @@ function init() {
             elem.className = "combo-box-menu theme-color-4 elem-shadow";
 
             //position menu
-            let menu_pos = getComboBoxPos(combo_box_launch_btn, elem);
+            let menu_pos = getComboBoxPos(combo_box_launch_btn, elem, document.getElementById("page-body-cont"));
             elem.setAttribute("style", "top: " + menu_pos.y + "px; " + "left: " + menu_pos.x + "px;");
 
             combo_box_active_menu_handler = elem;
@@ -88,13 +88,16 @@ function init() {
     };
 
     //calculate comboBox position
-    function getComboBoxPos(relative_elem, combo_box) {
+    function getComboBoxPos(relative_elem, combo_box, page_cont = document.body) {
+        let win_scr_top = getPageScrollTop();
+        let win_scr_left = getPageScrollLeft();
+        let body_x = (document.body.clientWidth - page_cont.offsetWidth) / 2;
         let lb = relative_elem.getBoundingClientRect();
         let shift_w = combo_box.offsetWidth - lb.width
-        let c_x = lb.x - shift_w;
+        let c_x = (lb.x - shift_w) - body_x;
         let c_y = lb.y + lb.height + 1;
 
-        return {x: c_x, y: c_y};
+        return {x: c_x + win_scr_left, y: c_y + win_scr_top};
     }
 
     //close menu opened by another combo box menu
@@ -108,16 +111,16 @@ function init() {
 
     //adapt page UI height
     function adaptPageHeightUI() {
-        let elem = document.querySelector(".page-content-cont"); //get page container
-        let pc_h = elem.offsetHeight;
+        let elem = document.getElementById("page-body-cont"); //get page container
+        let pc_h = document.getElementById("page-body-wrapper").offsetHeight;
         let w_h = window.innerHeight;
 
         //check to set page height to window height
         if (pc_h < w_h) {
             //set page height to window height
-            document.body.setAttribute("style", "height: " + (w_h - 2) + "px;");
+            elem.setAttribute("style", "height: " + (w_h - 2) + "px;");
         } else {
-            document.body.removeAttribute("style");
+            elem.removeAttribute("style");
         }
     }
 
