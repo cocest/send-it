@@ -1,6 +1,7 @@
 //initialise script
 function init() {
     const goto_input_elem = document.getElementById("parcel-goto-order-list");
+    const parcel_list_category = document.getElementById("parcel-list-category");
     let combo_box_active_menu_handler = null;
     let combo_box_menu_sync = 0;
     
@@ -54,12 +55,17 @@ function init() {
 
                 break;
 
-            case 1: //Deliverd
+            case 1: //Intransit
                 //code here
 
                 break;
 
-            case 2:
+            case 2: //Delivered
+                //code here
+
+                break;
+
+            case 3: //Cancelled Order
                 //code here
 
                 break;
