@@ -1,5 +1,6 @@
 //initialise script
 function init() {
+    const goto_input_elem = document.getElementById("parcel-goto-order-list");
     let combo_box_active_menu_handler = null;
     let combo_box_menu_sync = 0;
     
@@ -22,6 +23,55 @@ function init() {
 
                 break;
         }
+    };
+
+    //
+    window.nextParcelOrderList = function() {
+        //code here
+    };
+
+    //
+    window.prevParcelOrderList = function() {
+        //code here
+    };
+
+    //listen to goto to particular parcel enter event
+    goto_input_elem.onkeypress = function(e) {
+
+        let keycode = (e.keyCode ? e.keyCode : e.which);
+
+        if (keycode == "13") {
+            navigateParcelOrderListPage(e.currentTarget.value);
+        }
+    };
+
+    //listen to search by category change event
+    parcel_list_category.onchange = function(e) {
+        
+        switch (e.currentTarget.selectedIndex) {
+            case 0: //All
+                //code here
+
+                break;
+
+            case 1: //Deliverd
+                //code here
+
+                break;
+
+            case 2:
+                //code here
+
+                break;
+
+            default:
+                //shouldn't be here
+        }
+    };
+
+    //
+    function navigateParcelOrderListPage(page) {
+        //
     }
 
     //save the edited parcel order location
