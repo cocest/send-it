@@ -17,7 +17,7 @@ function init() {
         //reformat main menu bar
         if (scr_dis > 0) {
             //check if is mobile view
-            if (window,innerWidth < 800) {
+            if (window.innerWidth < 800) {
                 elem.className = "header-menu hd-menu-height-50 theme-color-1 elem-shadow-1";
 
             } else { //desktop view
@@ -26,7 +26,7 @@ function init() {
 
         } else { //restore previous format
             //check if is mobile view
-            if (window,innerWidth < 800) {
+            if (window.innerWidth < 800) {
                 elem.className = "header-menu hd-menu-height-50 theme-color-1";
 
             } else { //desktop view

@@ -29,7 +29,7 @@
         }
 
         return "";
-    }
+    };
 
     //this function prevent any action that launch 
     //windowm or panel when used
