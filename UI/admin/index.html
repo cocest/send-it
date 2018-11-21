@@ -21,222 +21,236 @@
     <script src="../js/admin_page.js" type="text/javascript"></script>
 </head>
 
-<body class="center-elem elem-shadow">
-    <!--Header menu bar-->
-    <div class="header-menu hd-menu-height-70 theme-color-1">
-        <div class="site-log-cont">
-            <a href="../index.html"><img class="site" src="../images/logo/img1.png" alt="SendIT Logo" /></a>
-        </div>
-        <div class="menu-logout-cont">
-            <a href="../index.html">
-                <ul class="hr-bar-menu">
-                    <li>
-                        <span class="fas fa-user-circle login-icon-fmt theme-txt-color-1"></span>
-                    </li>
-                    <li>
-                        <span class="login-txt-fmt theme-txt-color-1">Logout</span>
-                    </li>
-                </ul>
-            </a>
-        </div>
-    </div>
-
-    <!--page content container-->
-    <div class="page-content-cont">
-        <div class="caption-txt-6 theme-txt-color-2 right-align top-margin-15 bottom-margin-30">
-            SendIT Admin
-        </div>
-
-        <!--parcel order table-->
-        <div class="admin-table-wrapper top-margin-100 bottom-margin-35">
-            <table class="tbl-hd-txt-fmt tbl-min-w max-w-2 tbl-border-color">
-                <tr>
-                    <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
-                        Parcel ID
-                    </th>
-                    <th class="tbl-col-w-20 theme-color-1 theme-txt-color-1"></th>
-                    <th class="theme-color-1 theme-txt-color-1">
-                        Present Location
-                    </th>
-                    <th class="tbl-col-w-30 theme-color-1 theme-txt-color-1"></th>
-                    <th class="theme-color-1 theme-txt-color-1">
-                        Destination
-                    </th>
-                    <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
-                        Price
-                    </th>
-                    <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">
-                        Change Status
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        13252374
-                    </td>
-                    <td class="right-border-none">
-                        <span class="fas fa-pen"></span>
-                    </td>
-                    <td class="metain-col-w-ratio left-border-none right-border-none">
-                        <div class="order-location-editor id-13252374" contenteditable="true">yuju ygu uyuh uyun jcuin
-                            iugvk</div>
-                    </td>
-                    <td class="left-border-none">
-                        <div onclick="saveEditedOrderLocation('id-13252374')" class="save-parcel-order-btn-cont" title="Click to save changes">
-                            <span class="fas fa-save theme-txt-color-2"></span>
-                        </div>
-                    </td>
-                    <td>
-                        ynk hxb ki hgyiu uyj jucghj
-                    </td>
-                    <td>
-                        N6700
-                    </td>
-                    <td class="label-fmt-2 theme-txt-color-8 center-align">
-                        <button onclick="comboBoxMenu(this, 'cbm1')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-12 clr-hover">
-                            <span id="change_status_13252374">Intransit</span>
-                            <span class="fas fa-caret-down"></span>
-                        </button>
-                        <!--combo box button drop down menu-->
-                        <div id="cbm1" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
-                            <ul class="vt-bar-menu">
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '13252374')">
-                                    <span>Intransit</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '13252374')">
-                                    <span>Delivered</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '13252374')">
-                                    <span>Cancel Order</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        67098798
-                    </td>
-                    <td class="right-border-none">
-                        <span class="fas fa-pen"></span>
-                    </td>
-                    <td class="metain-col-w-ratio left-border-none right-border-none">
-                        <div class="order-location-editor id-67098798" contenteditable="true">yuju ygu uyuh uyun jcuin
-                            iugvk</div>
-                    </td>
-                    <td class="left-border-none">
-                        <div onclick="saveEditedOrderLocation('id-67098798')" class="save-parcel-order-btn-cont" title="Click to save changes">
-                            <span class="fas fa-save theme-txt-color-2"></span>
-                        </div>
-                    </td>
-                    <td>
-                        ynk hxb ki hgyiu uyj jucghj
-                    </td>
-                    <td>
-                        N1050
-                    </td>
-                    <td class="label-fmt-2 theme-txt-color-7 center-align">
-                        <button onclick="comboBoxMenu(this, 'cbm2')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
-                            <span id="change_status_67098798">Delivered</span>
-                            <span class="fas fa-caret-down"></span>
-                        </button>
-                        <!--combo box button drop down menu-->
-                        <div id="cbm2" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
-                            <ul class="vt-bar-menu">
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '67098798')">
-                                    <span>Intransit</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '67098798')">
-                                    <span>Delivered</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '67098798')">
-                                    <span>Cancel Order</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        58698542
-                    </td>
-                    <td class="right-border-none">
-                        <span class="fas fa-pen"></span>
-                    </td>
-                    <td class="metain-col-w-ratio left-border-none right-border-none">
-                        <div class="order-location-editor id-58698542" contenteditable="true">yuju ygu uyuh uyun jcuin
-                            iugvk</div>
-                    </td>
-                    <td class="left-border-none">
-                        <div onclick="saveEditedOrderLocation('id-58698542')" class="save-parcel-order-btn-cont" title="Click to save changes">
-                            <span class="fas fa-save theme-txt-color-2"></span>
-                        </div>
-                    </td>
-                    <td>
-                        ynk hxb ki hgyiu uyj jucghj
-                    </td>
-                    <td>
-                        N2500
-                    </td>
-                    <td class="label-fmt-2 theme-txt-color-7 center-align">
-                        <button onclick="comboBoxMenu(this, 'cbm3')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
-                            <span id="change_status_58698542">Delivered</span>
-                            <span class="fas fa-caret-down"></span>
-                        </button>
-                        <!--combo box button drop down menu-->
-                        <div id="cbm3" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
-                            <ul class="vt-bar-menu">
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '58698542')">
-                                    <span>Intransit</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '58698542')">
-                                    <span>Delivered</span>
-                                </li>
-                                <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '58698542')">
-                                    <span>Cancel Order</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <!--list navigation bar cont-->
-        <div class="mp-list-nav-bar-cont max-w-2 size-elem rounded-corner-4">
-            <div class="wrapper-1">
-                <select id="parcel-list-category" class="filter-by-category input-fmt rounded-corner-4 elem-height-30">
-                    <option value="0">All</option>
-                    <option value="1">Intransit</option>
-                    <option value="2">Delivered</option>
-                    <option value="3">Cancelled Order</option>
-                </select>
+<body>
+    <div id="page-body-cont" class="center-elem elem-shadow">
+        <div id="page-body-wrapper">
+            <!--Header menu bar-->
+            <div class="header-menu hd-menu-height-70 theme-color-1">
+                <div class="site-log-cont">
+                    <a href="../index.html"><img class="site" src="../images/logo/img1.png" alt="SendIT Logo" /></a>
+                </div>
+                <div class="menu-logout-cont">
+                    <a href="../index.html">
+                        <ul class="hr-bar-menu">
+                            <li>
+                                <span class="fas fa-user-circle login-icon-fmt theme-txt-color-1"></span>
+                            </li>
+                            <li>
+                                <span class="login-txt-fmt theme-txt-color-1">Logout</span>
+                            </li>
+                        </ul>
+                    </a>
+                </div>
             </div>
-            <div class="wrapper-3">
-                <ul class="hr-bar-menu">
-                    <li>
-                        <button class="goto-btn button elem-height-30 elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
-                            onclick="prevParcelOrderList()">Prev</button>
-                    </li>
-                    <li>
-                        <input id="goto-parcel-order" class="elem-height-30 rounded-corner-4" type="text" value="1">
-                        <label for="goto-parcel-order">of 5</label>
-                    </li>
-                    <li>
-                        <button class="goto-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
-                            onclick="nextParcelOrderList()">Next</button>
-                    </li>
-                </ul>
-            </div>
-            <div class="wrapper-2">
-                <ul class="hr-bar-menu">
-                    <li>
-                        <input class="search-input input-fmt elem-height-30 rounded-corner-4" type="text" placeholder="Parcel ID">
-                    </li>
-                    <li>
-                        <button class="search-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
-                            onclick="searchParcelOrderLIst()">Search</button>
-                    </li>
-                </ul>
+
+            <!--page content container-->
+            <div class="page-content-cont">
+                <div class="caption-txt-6 theme-txt-color-2 right-align top-margin-15 bottom-margin-30">
+                    SendIT Admin
+                </div>
+
+                <!--parcel order table-->
+                <div class="admin-table-wrapper top-margin-100 bottom-margin-35">
+                    <table class="tbl-hd-txt-fmt tbl-min-w max-w-2 tbl-border-color">
+                        <tr>
+                            <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
+                                Parcel ID
+                            </th>
+                            <th class="tbl-col-w-20 theme-color-1 theme-txt-color-1"></th>
+                            <th class="theme-color-1 theme-txt-color-1">
+                                Present Location
+                            </th>
+                            <th class="tbl-col-w-30 theme-color-1 theme-txt-color-1"></th>
+                            <th class="theme-color-1 theme-txt-color-1">
+                                Destination
+                            </th>
+                            <th class="tbl-col-w-80 theme-color-1 theme-txt-color-1">
+                                Price
+                            </th>
+                            <th class="tbl-col-w-100 theme-color-1 theme-txt-color-1">
+                                Change Status
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                13252374
+                            </td>
+                            <td class="right-border-none">
+                                <span class="fas fa-pen"></span>
+                            </td>
+                            <td class="metain-col-w-ratio left-border-none right-border-none">
+                                <div class="order-location-editor id-13252374" contenteditable="true">yuju ygu uyuh
+                                    uyun
+                                    jcuin
+                                    iugvk</div>
+                            </td>
+                            <td class="left-border-none">
+                                <div onclick="saveEditedOrderLocation('id-13252374')" class="save-parcel-order-btn-cont"
+                                    title="Click to save changes">
+                                    <span class="fas fa-save theme-txt-color-2"></span>
+                                </div>
+                            </td>
+                            <td>
+                                ynk hxb ki hgyiu uyj jucghj
+                            </td>
+                            <td>
+                                N6700
+                            </td>
+                            <td class="label-fmt-2 theme-txt-color-8 center-align">
+                                <button onclick="comboBoxMenu(this, 'cbm1')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-12 clr-hover">
+                                    <span id="change_status_13252374">Intransit</span>
+                                    <span class="fas fa-caret-down"></span>
+                                </button>
+                                <!--combo box button drop down menu-->
+                                <div id="cbm1" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                    <ul class="vt-bar-menu">
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '13252374')">
+                                            <span>Intransit</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '13252374')">
+                                            <span>Delivered</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '13252374')">
+                                            <span>Cancel Order</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                67098798
+                            </td>
+                            <td class="right-border-none">
+                                <span class="fas fa-pen"></span>
+                            </td>
+                            <td class="metain-col-w-ratio left-border-none right-border-none">
+                                <div class="order-location-editor id-67098798" contenteditable="true">yuju ygu uyuh
+                                    uyun
+                                    jcuin
+                                    iugvk</div>
+                            </td>
+                            <td class="left-border-none">
+                                <div onclick="saveEditedOrderLocation('id-67098798')" class="save-parcel-order-btn-cont"
+                                    title="Click to save changes">
+                                    <span class="fas fa-save theme-txt-color-2"></span>
+                                </div>
+                            </td>
+                            <td>
+                                ynk hxb ki hgyiu uyj jucghj
+                            </td>
+                            <td>
+                                N1050
+                            </td>
+                            <td class="label-fmt-2 theme-txt-color-7 center-align">
+                                <button onclick="comboBoxMenu(this, 'cbm2')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
+                                    <span id="change_status_67098798">Delivered</span>
+                                    <span class="fas fa-caret-down"></span>
+                                </button>
+                                <!--combo box button drop down menu-->
+                                <div id="cbm2" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                    <ul class="vt-bar-menu">
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '67098798')">
+                                            <span>Intransit</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '67098798')">
+                                            <span>Delivered</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '67098798')">
+                                            <span>Cancel Order</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                58698542
+                            </td>
+                            <td class="right-border-none">
+                                <span class="fas fa-pen"></span>
+                            </td>
+                            <td class="metain-col-w-ratio left-border-none right-border-none">
+                                <div class="order-location-editor id-58698542" contenteditable="true">yuju ygu uyuh
+                                    uyun
+                                    jcuin
+                                    iugvk</div>
+                            </td>
+                            <td class="left-border-none">
+                                <div onclick="saveEditedOrderLocation('id-58698542')" class="save-parcel-order-btn-cont"
+                                    title="Click to save changes">
+                                    <span class="fas fa-save theme-txt-color-2"></span>
+                                </div>
+                            </td>
+                            <td>
+                                ynk hxb ki hgyiu uyj jucghj
+                            </td>
+                            <td>
+                                N2500
+                            </td>
+                            <td class="label-fmt-2 theme-txt-color-7 center-align">
+                                <button onclick="comboBoxMenu(this, 'cbm3')" class="change-state-btn button rounded-corner-4 elem-height-30 theme-color-11 clr-hover">
+                                    <span id="change_status_58698542">Delivered</span>
+                                    <span class="fas fa-caret-down"></span>
+                                </button>
+                                <!--combo box button drop down menu-->
+                                <div id="cbm3" class="combo-box-menu theme-color-4 elem-shadow remove-elem" state="0">
+                                    <ul class="vt-bar-menu">
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('intransit', '58698542')">
+                                            <span>Intransit</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('delivered', '58698542')">
+                                            <span>Delivered</span>
+                                        </li>
+                                        <li class="elem-height-35" onclick="changeParcelOrderStatus('cancel', '58698542')">
+                                            <span>Cancel Order</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!--list navigation bar cont-->
+                <div class="mp-list-nav-bar-cont max-w-2 size-elem rounded-corner-4">
+                    <div class="wrapper-1">
+                        <select id="parcel-list-category" class="filter-by-category input-fmt rounded-corner-4 elem-height-30">
+                            <option value="0">All</option>
+                            <option value="1">Intransit</option>
+                            <option value="2">Delivered</option>
+                            <option value="3">Cancelled Order</option>
+                        </select>
+                    </div>
+                    <div class="wrapper-3">
+                        <ul class="hr-bar-menu">
+                            <li>
+                                <button class="goto-btn button elem-height-30 elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
+                                    onclick="prevParcelOrderList()">Prev</button>
+                            </li>
+                            <li>
+                                <input id="goto-parcel-order" class="elem-height-30 rounded-corner-4" type="text" value="1">
+                                <label for="goto-parcel-order">of 5</label>
+                            </li>
+                            <li>
+                                <button class="goto-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
+                                    onclick="nextParcelOrderList()">Next</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrapper-2">
+                        <ul class="hr-bar-menu">
+                            <li>
+                                <input id="parcel-goto-order-list" class="search-input input-fmt elem-height-30 rounded-corner-4" type="text"
+                                    placeholder="Parcel ID">
+                            </li>
+                            <li>
+                                <button class="search-btn button elem-height-30 rounded-corner-4 theme-color-3 clr-hover theme-txt-color-1"
+                                    onclick="searchParcelOrderLIst()">Search</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

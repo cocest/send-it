@@ -1,5 +1,15 @@
 /* css for admin page */
 
+body {
+    max-width: none;
+}
+
+#page-body-cont {
+    position: relative;
+    max-width: 1200px;
+    overflow-x: hidden;
+}
+
 .page-content-cont {
     padding: 80px 10px 10px 10px;
     overflow: hidden;
